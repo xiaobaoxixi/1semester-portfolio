@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Video</title>
+    <link rel="stylesheet" href="1semester.css">
+</head>
+
+<body id="video">
+    <!-- script conflict with iframe setting in diigo, so move upfront. use defer so js gets executed after document is parsed  -->
+    <script defer src="js/video.js"></script>
+
+    <section class="mainNav">
+    <button><a href="index.html">Home</a></button>
+    <button><a href="about.html">About</a></button>
+    <button class="toggleProjectList">Project List</button>
+
+    <nav class="projectList">
+        <ul>
+          <li>01.04. Responsive Website - Op Art</li>
+          <li class="lastInTheme group"><a>01.05. Basic Redesign</a></li>
+          <li>02.01. Simple Animation - Mr. Ball</li>
+          <li>02.02. Storytelling &amp; Character Design </li>
+          <li class="group">02.03.02. Interactive Animation</li>
+          <li class="group">02.03. ProjectPools - the "difficult" Magic Pie and the "easy" gallery</li>
+          <li class="lastInTheme group">Interactive Trailor - Dr. Strangelove</li>
+          <li class="lastInTheme group">03. Basic Video</li>
+          <li class="lastInTheme group">04. Basic UX / Digital Business</li>
+        </ul>
+    </nav>
+    </section>
+    <main>
+        <div class="desc">
+            <h1>Basic Video</h1>
+            <p>I. Modern Urben Life - busy</p>
+            <p>II. 80's Citywalk and Meetup</p>
+            <p>add control, click for pause/play</p>
+        </div>
+        <div class="bg-video1">
+            <video class="video1" src="video/life-passing-by.mp4" type="video/mp4" controls></video>
+        </div>
+        <div class="bg-video2">
+            <div class="storyboard">
+                <img class="storyboard">
+            </div>
+        </div>
+        <video class="video2" src="video/vhs-citywalk.mp4" type="video/mp4" autoplay></video>
+    </main>
+</body>
+</html>
