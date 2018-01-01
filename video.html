@@ -7,55 +7,67 @@
     <link rel="stylesheet" href="1semester.css">
 </head>
 
-<body id="video">
+<body>
     <!-- script conflict with iframe setting in diigo, so move upfront. use defer so js gets executed after document is parsed  -->
     <script defer src="js/video.js"></script>
 
     <section class="mainNav">
-    <button><a href="index.html">Home</a></button>
-    <button><a href="about.html">About</a></button>
-    <button class="toggleProjectList">Project List</button>
+        <nav class="back"><a href="index.html">&larr; back</a></nav>
+        <nav class="about"><a href="about.html">&larr; about me</a></nav>
 
-    <nav class="projectList">
-        <ul>
-          <li>01.04. Responsive Website - Op Art</li>
-          <li class="lastInTheme group"><a>01.05. Basic Redesign</a></li>
-          <li>02.01. Simple Animation - Mr. Ball</li>
-          <li>02.02. Storytelling &amp; Character Design </li>
-          <li class="group">02.03.02. Interactive Animation</li>
-          <li class="group">02.03. ProjectPools - the "difficult" Magic Pie and the "easy" gallery</li>
-          <li class="lastInTheme group">Interactive Trailor - Dr. Strangelove</li>
-          <li class="lastInTheme group">03. Basic Video</li>
-          <li class="lastInTheme group">04. Basic UX / Digital Business</li>
-        </ul>
-    </nav>
+        <button class="toggleProjectList">Project List</button>
+        <nav class="projectList">
+            <ul>
+              <li>01.04. Responsive Website - Op Art</li>
+              <li class="lastInTheme group"><a>01.05. Basic Redesign</a></li>
+              <li>02.01. Simple Animation - Mr. Ball</li>
+              <li>02.02. Storytelling &amp; Character Design </li>
+              <li class="group">02.03.02. Interactive Animation</li>
+              <li class="group">02.03. ProjectPools - the "difficult" Magic Pie and the "easy" gallery</li>
+              <li class="lastInTheme group">Interactive Trailor - Dr. Strangelove</li>
+              <li class="lastInTheme group">03. Basic Video</li>
+              <li class="lastInTheme group">04. Basic UX / Digital Business</li>
+            </ul>
+        </nav>
     </section>
     <main>
         <div class="desc">
             <h1>Theme 3: Basic Video</h1>
-            <h2>The Modern Urben Life - without words</h2>
         </div>
+        <img class="videos" src="img/video/videos.png" alt="video titles">
+        <div class="more"></div>
         <div class="bg-video1">
+            <div class="h21Wrapper">
+<!--                <h2 class="h21">The Modern<br>Urben Life,<br> without words</h2> -->
+            </div>
             <div class="video1Wrapper">
-                <video class="video1" src="video/life-passing-by.mp4" type="video/mp4"></video>
+                <video class="video1" src="video/life-passing-by-640.mp4" type="video/mp4"></video>
                 <div class="progressLine1 progressLine"></div>
-                <p><button class="playPause1">play/pause</button>
-                <button class="fullscreen1">fullscreen</button></p>
+                <div class="playPause playPause1">
+                    <div class="pauseButton pauseButton1 hide"></div>
+                    <div class="playButton1">PLAY</div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-storyboard">
+            <img class="storyboardButtons storyboardButton" src="img/video/storyboard-button.png" alt="storyboard button">
+            <img class="storyboardButtons moreButton" src="img/video/more-white.png" alt="more info button">
+            <div class="storyboard">
+                <img class="storyboard" src="img/video/storyboard1.png" alt="storyboard">
             </div>
         </div>
         <div class="bg-video2">
-            <div class="storyboard">
-                <p>Storyboard</p>
-                <img class="storyboard">
+<!--            <h2 class="h22">The 80s Citywalk, <br>that has it all</h2>  -->
+            <div class="video2Wrapper">
+                <video class="video2" src="video/vhs-citywalk-640.mp4" type="video/mp4"></video>
+                <div class="progressLine2 progressLine"></div>
+                <div class="playPause playPause2">
+                    <div class="pauseButton pauseButton2 hide"></div>
+                    <div class="playButton2">PLAY</div>
+                </div>
             </div>
         </div>
-        <h3>The 80's Citywalk that has it all</h3>
 
-        <video class="video2" src="video/vhs-citywalk.mp4" type="video/mp4"></video>
-        <div class="progressLine2 progressLine"></div>
-        <p><button class="playPause2">play/pause</button>
-        <button class="fullscreen2">fullscreen</button></p>
     </main>
-    <nav class="back"><a href="index.html">&larr; back</a></nav>
 </body>
 </html>
