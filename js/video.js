@@ -99,8 +99,14 @@ function clickButton(b){
             storyboardButtons.forEach(addMoveDown);
             function addMoveDown(m){
                 m.classList.add('moveDown');
+                storyboard.classList.add('expand');
             }
-            storyboard.classList.add('expand');
+            if(b.src.indexOf('storyboard')>-1){
+                videoStoryboard.classList.remove('hide');
+            }
+            if(b.src.indexOf('more')>-1){
+                // show more info
+            }
         }
     }
 }
@@ -110,7 +116,9 @@ function clickStoryboardButtonAtBottom(){
     if(storyboardButton.className.indexOf('moveDown')>-1 && storyboardButton.src.indexOf('reverse')<0){
         storyboardButton.src = "img/video/storyboard-button-reverse.png";
         moreButton.src = "img/video/more-white.png";
-        videoStoryboard.classList.add('expand');
+//        videoStoryboard.classList.add('expand');
+        storyboard.classList.add('expanded');
+        videoStoryboard.classList.remove('hide');
     }
 }
 moreButton.addEventListener('click',clickMoreButtonAtBottom);
@@ -119,6 +127,7 @@ function clickMoreButtonAtBottom(){
         storyboardButton.src = "img/video/storyboard-button.png";
         moreButton.src = "img/video/more-white-reverse.png";
         videoStoryboard.classList.remove('expand');
+        videoStoryboard.classList.add('hide');
     }
 }
 

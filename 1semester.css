@@ -132,7 +132,7 @@ h2 {
 }
 .bg-video2 {
     width: 62vw;
-    height: 62vw;
+    height: 56vw;
     max-height: 900px;
     max-width: 1100px;
     position: absolute;
@@ -142,28 +142,28 @@ h2 {
 }
 .video2Wrapper {
     position: absolute;
-    top: 17%;
+    top: 100px;
     width: 80%;
     height: 80%;
     margin-left: 10%;
 }
 .video2 {
     display: block;
-    width: 90%;
+    width: 84%;
     max-width: 640px;
     position: absolute;
-    left: 5%;
+    left: 8%;
     top: 0;
 }
 .progressLine2 {
-    height: 20px;
+    height: 10px;
     border-bottom: 2px solid #aaa;
     width: 2px;
     animation: progress2 206s forwards linear;
     animation-play-state: paused;
     position: absolute;
-    bottom: 5%;
-    left: 5%
+    bottom: 20px;
+    left: 8%
 }
 @keyframes progress2 {
     from {
@@ -176,15 +176,15 @@ h2 {
 .playPause2 {
     color: #aaa;
     position: absolute;
-    bottom: 1em;
-    right: 3%;
+    bottom: 20px;
+    right: 8%;
 }
 .playPause2 div {
     border-color: #aaa;
 }
 .bg-storyboard {
     width: 36vw;
-    height: 62vw;
+    height: 56vw;
     max-height: 900px;
     position: absolute;
     top: 750px;
@@ -192,9 +192,9 @@ h2 {
     padding-top: 3vw;
 }
 .storyboardButtons {
-    height: 55px;
+    height: 65px;
     position: absolute;
-    top: 40vw;
+    top: 36vw;
     cursor: pointer;
 }
 .storyboardButtons.moveDown {
@@ -207,7 +207,7 @@ h2 {
     }
 }
 .storyboardButton {
-    right: calc(7vw + 60px);
+    right: calc(7vw + 77px);
 }
 .moreButton {
     right: 7vw
@@ -221,19 +221,32 @@ div.storyboard {
     margin: 0;
     overflow: hidden;
 }
-img.storyboard {
-    width: 105%;
-    max-height:  420px;
-    max-width: 420px;
-}
 div.storyboard.expand {
     overflow: visible;
+    opacity: 0;
     animation: expand 1s ease-out forwards;
 }
 @keyframes expand {
-    to {
-        height: 53vw;
+    50% {
+        opacity: 0;
     }
+    100% {
+        height: 600px;
+        opacity: 1;
+    }
+}
+div.storyboard.expanded {
+    overflow: visible;
+    height: 600px;
+    position: absolute;
+    bottom: 200px;
+}
+img.storyboard {
+    width: 115%;
+    max-height:  420px;
+    max-width: 420px;
+    position: absolute;
+    bottom: 0;
 }
 nav.back a, nav.about a {
     color: #333;
