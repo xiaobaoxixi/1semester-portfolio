@@ -22,16 +22,50 @@ body#video main{
 .desc {
     width: 30%;
     position: absolute;
-    left: 0;
+    left: 5vw;
+}
+h1 {
+    color: #111;
+    font-size: 4em;
+}
+h2 {
+    color: #222;
+    font-size: 3em;
+    transform: translateY(20vw) translate(20vw, 20vh);
+}
+h3{
+    color: #333333;
+    font-size: 2.5em;
+    transform: rotate(90deg) translateY(10vw) translateX(0vh);
+}
+.progressLine {
+    height: 7px;
+    border-bottom: 2px solid #333;
+    width: 2px;
+    animation: progress 111s forwards linear;
+    animation-play-state: paused;
+}
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
 }
 .bg-video1 {
-    width: 70vw;
-    max-width: 720px;
-    height: 550px;
+    width: 67vw;
+    max-width: 760px;
+    height: 700px;
     position: absolute;
     right: 5vw;
-    border: 2px solid black;
-    padding-top: 100px;
+    border: 2px solid #222;
+    padding-top: 70px;
+    margin: 0 auto;
+}
+.video1Wrapper {
+    width: 100%;
+    max-width: 560px;
     margin: 0 auto;
 }
 .video1 {
@@ -39,7 +73,11 @@ body#video main{
     width: 100%;
     max-width: 560px;
     height: 315px;
-    margin: 0 auto;
+}
+.bg-video1 button {
+    margin-top: 1em;
+    margin-left: 2em;
+    float: right;
 }
 .bg-video2 {
     width: 50vw;
@@ -68,8 +106,16 @@ body#video main{
     max-height:  420px;
     max-width: 420px;
     display: block;
+    color: white;
 }
 .storyboard {
-    background-image: url(img/video/storyboard1.png);
     background-size: contain;
+}
+nav.back a {
+    color: #777;
+    position: fixed;
+    bottom: 3em;
+    left: 2em;
+    font-size: 1.3em;
+    cursor: pointer;
 }
