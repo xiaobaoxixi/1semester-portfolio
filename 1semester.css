@@ -5,6 +5,10 @@
 	font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
 	line-height: 1.5;
 }
+a, a:hover, a:active, a:visited {
+    color: #333;
+    font-weight: bold;
+}
 main {
     position: relative;
 }
@@ -14,6 +18,9 @@ img {
     width: 100%;
     height: auto;
 }
+img.more {
+    cursor: pointer;
+}
 .mainNav {
     width: 100%;
     height: 3em;
@@ -21,11 +28,15 @@ img {
 }
 /* ux */
 body#ux {
+    width: 100vw;
     min-width: 480px;
 }
 h1 {
     display: inline;
     margin-left: 1em;
+}
+h5 {
+    margin-left: 2.5em;
 }
 img.icon {
     width: 50px;
@@ -35,9 +46,29 @@ img.icon {
 .segment {
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
-img.more ~p {
-    margin-left: 2em;
+div.infoSH {
+    width: 80%;
+    height: auto;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    background-color: white;
+    position: absolute;
+    left: 10%;
+    top: 5em;
+    font-size: 13px;
+    opacity: 0;
+}
+div.infoSH.show {
+    z-index: 2;
+    animation: showInfoSH .5s forwards;
+}
+@keyframes showInfoSH {
+    to {
+        opacity: 1;
+    }
 }
 .introSH {
     height: 630px;
@@ -49,7 +80,7 @@ img.hub {
 div.line1 {
     height: 0;
     width: 30%;
-    border-left: 1px dotted blue;
+    border-left: 1px dotted #2258A4;
     position: absolute;
     left: 5em;
     bottom: 50vw;
@@ -70,10 +101,10 @@ div.line1 p {
     animation: showP .5s .7s forwards;
 }
 div.line2 p {
-    animation: showP .7s 6.2s forwards;
+    animation: showP .7s 5.2s forwards;
 }
 div.line3 p {
-    animation: showP 1s 3.6s ease-out forwards;
+    animation: showP 1s 2.1s ease-out forwards;
 }
 @keyframes showP {
     to {
@@ -81,6 +112,7 @@ div.line3 p {
     }
 }
 div.line1.lineAnimation1 p, div.line2.lineAnimation2 p, div.line3.lineAnimation3 p {
+    font-size: 14px;
     background: white;
     padding: .75em;
     white-space: nowrap;
@@ -113,15 +145,15 @@ div.line2.lineAnimation2 p:nth-of-type(2) {
 div.line3 {
     height: 0;
     width: 0;
-    border-right: 1px dotted blue;
-    border-top: 1px dotted blue;
+    border-right: 1px dotted #2258A4;
+    border-top: 1px dotted #2258A4;
     position: absolute;
     bottom: 55%;
     right: 7em;
     z-index: 2;
 }
 div.line3.lineAnimation3 {
-    animation: line3UpLeft 1s 2.6s ease-out forwards;
+    animation: line3UpLeft 1s 1.6s ease-out forwards;
 }
 @keyframes line3UpLeft {
     50% {
@@ -136,14 +168,14 @@ div.line3.lineAnimation3 {
 div.line2 {
     height: 0;
     width: 0;
-    border-right: 1px dotted blue;
-    border-top: 1px dotted blue;
+    border-right: 1px dotted #2258A4;
+    border-top: 1px dotted #2258A4;
     position: absolute;
     bottom: 54%;
     right: 60%;
 }
 div.line2.lineAnimation2 {
-    animation: line2UpLeft 1s 5.1s ease-out forwards;
+    animation: line2UpLeft 1s 4.1s ease-out forwards;
 }
 @keyframes line2UpLeft {
     50% {
@@ -175,6 +207,97 @@ h2 {
 }
 a.pdf {
     text-decoration: underline;
+    margin: 1em 0 0 3em;
+}
+.report section {
+    padding: .5em 3em;
+}
+.report section h3 {
+    display: inline;
+    margin: 1em 0;
+    font-size: 1.3em;
+}
+.report section h3 ~img {
+    width: 2em;
+}
+.report section p {
+    display: none;
+    height: 0;
+    opacity: 0;
+    margin-top: 1em;
+}
+.report section p.expand {
+    display: inherit;
+    animation: expandReport 1s ease-in forwards;
+}
+@keyframes expandReport {
+    50% {
+        height: auto;
+        opacity: 0;
+    }
+    100% {
+        height: auto;
+        opacity: 1;
+    }
+}
+img.pdf {
+    width: 20px;
+    margin-left: 0;
+}
+img.logo {
+    width: 70%;
+    max-width: 480px;
+    margin-left: 5%;
+}
+/*img.logo:first-of-type {
+    width: 100%;
+    margin-left: -10%;
+}*/
+.aboutLogoDesignWrapper {
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -90%;
+    padding: 1.5em;
+    font-size: 14px;
+}
+.aboutLogoDesignWrapper.slideOut {
+    animation: wdilSlideOut .5 ease-out forwards;
+    right: -45%;
+}
+@keyframes wdilSlideOut {
+    to{
+        right: 250px;
+    }
+}
+.wdil {
+    width: 9%;
+    position: absolute;
+    left: -7%;
+    cursor: pointer;
+}
+.slideFat {
+    width: 7%;
+    position: absolute;
+    left: -7%;
+    top: 31%;
+    cursor: pointer;
+}
+.aboutLogoDesign {
+    background-color: white;
+    padding: .5em 1em 2em 1em;
+}
+.aboutLogoDesign a {
+    margin-left: 0;
+}
+.logoDouble {
+    width: 50%;
+    float: left;
+}
+iframe {
+    width: 100%;
+    height: 300px;
 }
 .hide {
     display: none;

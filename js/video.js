@@ -22,6 +22,7 @@ let oriAss = document.querySelector('.oriAss');
 let deem = document.querySelector('.black');
 let originalAssignment= document.querySelector('.originalAssignment');
 let slideInButton = document.querySelector('img.slideIn');
+
 // switch between storyboard imgs
 videoStoryboard.addEventListener('click', changeImg);
 function changeImg(){
