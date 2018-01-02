@@ -25,8 +25,9 @@ body#ux {
 }
 h1 {
     display: inline;
+    margin-left: 1em;
 }
-img.more {
+img.icon {
     width: 50px;
     display: inline;
     margin-left: 1em;
@@ -35,12 +36,15 @@ img.more {
     width: 100%;
     position: relative;
 }
-.intro {
+img.more ~p {
+    margin-left: 2em;
+}
+.introSH {
     height: 630px;
 }
 img.hub {
     position: absolute;
-    bottom: 1em;
+    bottom: 0;
 }
 div.line1 {
     height: 0;
@@ -52,7 +56,7 @@ div.line1 {
     padding-left: 1em;
 }
 div.line1.lineAnimation1 {
-    animation: line1Up 1s 1s ease-in forwards;
+    animation: line1Up 1s ease-in forwards;
 }
 @keyframes line1Up {
     to {
@@ -63,13 +67,13 @@ div.lines p {
     opacity: 0;
 }
 div.line1 p {
-    animation: showP .5s 1.7s forwards;
+    animation: showP .5s .7s forwards;
 }
 div.line2 p {
-    animation: showP .7s 5.2s forwards;
+    animation: showP .7s 6.2s forwards;
 }
 div.line3 p {
-    animation: showP .7s 3.6s ease-out forwards;
+    animation: showP 1s 3.6s ease-out forwards;
 }
 @keyframes showP {
     to {
@@ -139,7 +143,7 @@ div.line2 {
     right: 60%;
 }
 div.line2.lineAnimation2 {
-    animation: line2UpLeft 1s 4.1s ease-out forwards;
+    animation: line2UpLeft 1s 5.1s ease-out forwards;
 }
 @keyframes line2UpLeft {
     50% {
@@ -151,9 +155,27 @@ div.line2.lineAnimation2 {
         width: 110px;
     }
 }
-
-
-
+img.slideDown {
+    display: block;
+    height: 30px;
+    width: 40px;
+    margin: 2em auto;
+}
+div.descSH {
+    text-align: center;
+    padding: 1em 2em;
+    margin-bottom: 2em;
+}
+div.descSH p {
+    margin-top: 1em;
+}
+h2 {
+    text-align: center;
+    margin: 1em 0;
+}
+a.pdf {
+    text-decoration: underline;
+}
 .hide {
     display: none;
 }
