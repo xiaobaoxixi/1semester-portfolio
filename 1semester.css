@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+	line-height: 1.5;
+}
+main {
+    position: relative;
+}
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+.mainNav {
+    width: 100%;
+    height: 3em;
+    overflow: hidden;
+}
+/* ux */
+body#ux {
+    min-width: 480px;
+}
+h1 {
+    display: inline;
+}
+img.more {
+    width: 50px;
+    display: inline;
+    margin-left: 1em;
+}
+.segment {
+    width: 100%;
+    position: relative;
+}
+.intro {
+    height: 630px;
+}
+img.hub {
+    position: absolute;
+    bottom: 1em;
+}
+div.line1 {
+    height: 0;
+    width: 30%;
+    border-left: 1px dotted blue;
+    position: absolute;
+    left: 5em;
+    bottom: 50vw;
+    padding-left: 1em;
+}
+div.line1.lineAnimation1 {
+    animation: line1Up 1s 1s ease-in forwards;
+}
+@keyframes line1Up {
+    to {
+        height: 100px;
+    }
+}
+div.lines p {
+    opacity: 0;
+}
+div.line1 p {
+    animation: showP .5s 1.7s forwards;
+}
+div.line2 p {
+    animation: showP .7s 5.2s forwards;
+}
+div.line3 p {
+    animation: showP .7s 3.6s ease-out forwards;
+}
+@keyframes showP {
+    to {
+        opacity: 1;
+    }
+}
+div.line1.lineAnimation1 p, div.line2.lineAnimation2 p, div.line3.lineAnimation3 p {
+    background: white;
+    padding: .75em;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+}
+div.line1.lineAnimation1 p {
+    left: -3em;
+}
+div.line1.lineAnimation1 p:first-of-type {
+    top: 2em;
+}
+div.line3.lineAnimation3 p:first-of-type {
+    top: -5em;
+}
+div.line3.lineAnimation3 p:nth-of-type(3) {
+    top: -1em;
+}
+div.line3.lineAnimation3 p:nth-of-type(2) {
+    top: -3em;
+}
+div.line2.lineAnimation2 p:first-of-type {
+    top: -7em;
+    left: -1em;
+}
+div.line2.lineAnimation2 p:nth-of-type(2) {
+    top: -5em;
+    left: -1em;
+}
+div.line3 {
+    height: 0;
+    width: 0;
+    border-right: 1px dotted blue;
+    border-top: 1px dotted blue;
+    position: absolute;
+    bottom: 55%;
+    right: 7em;
+    z-index: 2;
+}
+div.line3.lineAnimation3 {
+    animation: line3UpLeft 1s 2.6s ease-out forwards;
+}
+@keyframes line3UpLeft {
+    50% {
+        height: 50px;
+        width: 0;
+    }
+    100% {
+        height: 50px;
+        width: 31%;
+    }
+}
+div.line2 {
+    height: 0;
+    width: 0;
+    border-right: 1px dotted blue;
+    border-top: 1px dotted blue;
+    position: absolute;
+    bottom: 54%;
+    right: 60%;
+}
+div.line2.lineAnimation2 {
+    animation: line2UpLeft 1s 4.1s ease-out forwards;
+}
+@keyframes line2UpLeft {
+    50% {
+        height: 157px;
+        width: 0;
+    }
+    100% {
+        height: 157px;
+        width: 110px;
+    }
+}
+
+
+
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 28em){
+
+}
+@media screen and (min-width: 48em){
+    img.hub {
+        width: 70%;
+        right: 5%;
+    }
+}
