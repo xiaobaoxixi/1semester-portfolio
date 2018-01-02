@@ -8,11 +8,45 @@ a, a:active, a:checked, a:focus, a:hover, a:visited {
     color: black;
     text-decoration: none;
 }
-iframe.original {
-    width: 90%;
-    height: 500px;
+.iframeWrapper, iframe.originalAssignment {
     border: none;
-    margin-left: 5%;
+    width: 1248px;
+    height: 702px;
+    position: fixed;
+    right: -1280px;
+    bottom: 0;
+    z-index: 11;
+    overflow: visible;
+}
+.slideIn {
+    width: 65px;
+    height: 72px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+    cursor: pointer;
+}
+iframe.originalAssignment.slideOut {
+    animation: slideOut 1s linear forwards;
+}
+@keyframes slideOut {
+    to {
+        transform: translateX(-1370px);
+    }
+}
+.deem {
+    z-index: 10;
+    width: 100vw;
+    height: 300vh;
+    background-color: black;
+    opacity: 0;
+    animation: deem .7s ease-out forwards;
+}
+@keyframes deem {
+    to {
+        opacity: .97;
+    }
 }
 main{
     position: relative;
@@ -40,17 +74,31 @@ h1 {
     font-size: 4em;
     margin-top: 100px;
 }
-div.more, img.videos {
-    height: 230px;
+div.more1, img.videos {
+    height: 70px;
     width: 370px;
     position: absolute;
     left: calc(33vw - 170px);
     top: 490px;
     z-index: 1;
 }
-div.more {
+div.more1 {
     cursor: pointer;
     z-index: 2;
+}
+div.more1 p {
+    display: none;
+}
+div.more1.expanded {
+    margin-top: 26px;
+    margin-left: 0px;
+    height: 234px;
+    width: 470px;
+    background-color: white;
+    padding: 2em 0;
+}
+div.more1.expanded p {
+    display: block;
 }
 img.videos {
     height: 370px;
@@ -212,7 +260,7 @@ h2 {
 .moreButton {
     right: 7vw
 }
-div.storyboard {
+div.info2 {
     width: 35vw;
     height: 0;
     display: block;
@@ -221,7 +269,7 @@ div.storyboard {
     margin: 0;
     overflow: hidden;
 }
-div.storyboard.expand {
+div.info2.expand {
     overflow: visible;
     opacity: 0;
     animation: expand 1s ease-out forwards;
@@ -235,18 +283,19 @@ div.storyboard.expand {
         opacity: 1;
     }
 }
-div.storyboard.expanded {
+div.info2.expanded {
     overflow: visible;
     height: 600px;
     position: absolute;
     bottom: 200px;
 }
-img.storyboard {
+img.storyboard, div.more2 {
     width: 100%;
     max-height: 600px;
     max-width: 600px;
     position: absolute;
     bottom: 20px;
+    border-bottom: 1px solid black;
 }
 nav.back a, nav.about a {
     color: #333;
