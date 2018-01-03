@@ -347,9 +347,9 @@ iframe {
     }
 }
 /* 768 */
-@media screen and (min-width: 48em){
-    div.introSH {
-        width: 768px;
+@media screen and (min-width: 56em){
+    div.introSH, div.report, div.dilemma {
+        width: 860px;
         margin: 0 auto;
     }
     div.line1 {
