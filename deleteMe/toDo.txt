@@ -1,5 +1,8 @@
 to do:
 
+ANIMATION:
+hair move is: follow through, overlapping action, drag
+
 UX:
 text into column
 2x2 img when screen wide

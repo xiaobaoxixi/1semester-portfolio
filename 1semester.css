@@ -26,6 +26,9 @@ img.more {
     height: 3em;
     overflow: hidden;
 }
+main {
+    min-width: 480px;
+}
 .segment {
     width: 100%;
     position: relative;
@@ -33,27 +36,60 @@ img.more {
 }
 
 /* animation */
-body#animation main {
-    min-width: 480px;
-}
 .mrBall > div {
     width: 90vw;
+    height: 60vw;
     margin: 1em auto;
     border: 1px solid black;
+    position: relative;
 }
-.mrBall > div > div{
+div.toggleStage {
+    height: 3em;
+    padding-top: 1em;
+}
+.toggleStage span:not(:first-of-type) {
+    margin-left: 3em;
+}
+.toggleStage span.selected {
+    font-weight: bold;
+}
+.mrBallDesc {
+    width: 70%;
+    border: 3px dotted green;
+}
+.mrBallDesc p {
+    font-size: .9em;
+    font-weight: bold;
+}
+.mrBallSample{
     border: 1px solid red;
+    position: absolute;
 }
-
-
+.mrBallLow {
+    width: 70%;
+    height: 30%;
+    bottom: 30%;
+}
+.mrBallTall {
+    width: 30%;
+    height: 70%;
+    right: 0;
+    top: 0;
+}
+.mrBallWide {
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+}
+.mrBallFull {
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+}
 
 
 
 /* ux */
-body#ux main {
-    width: 100vw;
-    min-width: 480px;
-}
 h1 {
     display: inline;
     margin-left: 1em;
@@ -337,6 +373,16 @@ iframe {
 }
 /* 576 */
 @media screen and (min-width: 36em){
+    /* animation */
+    .mrBall > div {
+        width: 81vw;
+        height: 54vw;
+    }
+    div.toggleStage {
+        height: 3em;
+    }
+
+    /* ux */
     .introSH {
         height: 650px;
     }
@@ -366,6 +412,16 @@ iframe {
 }
 /* 768 */
 @media screen and (min-width: 56em){
+    /* animation */
+    .mrBall > div {
+        width: 66vw;
+        height: 44vw;
+    }
+    div.toggleStage {
+    height: 3em;
+}
+
+    /* ux */
     div.introSH, div.report, div.dilemma {
         width: 860px;
         margin: 0 auto;
