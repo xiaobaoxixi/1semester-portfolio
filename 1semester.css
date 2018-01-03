@@ -26,6 +26,29 @@ img.more {
     height: 3em;
     overflow: hidden;
 }
+.segment {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* animation */
+body#animation main {
+    min-width: 480px;
+}
+.mrBall > div {
+    width: 90vw;
+    margin: 1em auto;
+    border: 1px solid black;
+}
+.mrBall > div > div{
+    border: 1px solid red;
+}
+
+
+
+
+
 /* ux */
 body#ux main {
     width: 100vw;
@@ -42,11 +65,6 @@ img.icon {
     width: 40px;
     display: inline;
     margin-left: 1em;
-}
-.segment {
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
 }
 div.infoSH {
     width: 80%;
