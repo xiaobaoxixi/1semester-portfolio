@@ -1,0 +1,22 @@
+to do:
+
+UX:
+text into column
+2x2 img when screen wide
+more minus button to fixed position?
+!!! use grid to rearrage elements
+
+
+VIDEO:
+click to turn storyboard
+input storyboard text
+draw frist image for both videos, click on image transit to video
+
+
+
+
+material:
+
+. Students could find study resources and teaching materials here, but it would be more flexible than Fronter; students could look for fellows with the same interests/focus, but it would be more professional than Facebook; students could ask academic questions and get instant answer, but it would be more precise and tailored than what google provides; students could read about much insights in each study field like in many other specialty forums, but they only need one login to have access to them all. 
+
+

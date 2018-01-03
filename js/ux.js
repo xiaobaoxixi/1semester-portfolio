@@ -4,6 +4,8 @@ let infoSH = document.querySelector('div.infoSH');
 let wdil = document.querySelector('.wdil');
 let slideFat = document.querySelector('.slideFat');
 let aboutLogoDesignWrapper = document.querySelector('.aboutLogoDesignWrapper');
+let aPdf = document.querySelector('a.iframe');
+let iframe = document.querySelector('iframe');
 // toggle info
 showInfoSHButton.addEventListener('click', toggleInfoSH);
 function toggleInfoSH(){
@@ -27,7 +29,6 @@ function clickMoreIcon(m){
         }
     }
 }
-
 // toggle what did i learn (wdil)
 wdil.addEventListener('click', toggleWDIL);
 slideFat.addEventListener('click', toggleWDIL);
@@ -38,4 +39,9 @@ function toggleWDIL(){
     } else {
         slideFat.src = "img/ux/slideOut-fat.png";
     }
+}
+// open iframe
+aPdf.addEventListener('click', openIframe);
+function openIframe(){
+    iframe.style.height = "600px";
 }
