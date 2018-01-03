@@ -36,6 +36,9 @@ main {
 }
 
 /* animation */
+body#animation a {
+    margin-left: 5em;
+}
 .mrBall > div {
     width: 90vw;
     height: 60vw;
@@ -86,8 +89,130 @@ div.toggleStage {
     height: 70%;
     bottom: 0;
 }
-
-
+.story {
+    height: 190vw;
+    min-height: 912px;
+}
+.storyIdeaStyleTile, .storyboardWorksheet {
+    margin: 2em 0;
+    width: 100%;
+    min-width: 480px;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.storyIdeaStyleTile {
+    height: 76vw;
+    background-image: url(img/animation/storytile.jpg);
+}
+.storyboardWorksheet {
+    height: 73vw;
+    background-image: url()
+}
+.storyIdeaStyleTile a {
+    position: absolute;
+    bottom: 0;
+}
+.storyDesc {
+    width: 64%;
+    height: 64%;
+    position: absolute;
+    padding: 2em 0 1em 6em;
+    overflow-y: scroll;
+    font-size: .8em;
+}
+.storyDesc > p {
+    font-size: .85em;
+}
+.storyDesc h4 {
+    margin-top: 1em;
+}
+.worksheetDesc {
+    height: 15em;
+}
+.worksheetDesc h2 {
+    margin-top: 0;
+}
+.worksheet {
+    width: 90vw;
+    height: 47vw;
+    max-width: 960px;
+    max-height: calc(362px + 5em);
+    position: absolute;
+    top: 15em;
+    overflow: scroll;
+}
+.worksheet img {
+    height: auto;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+.storyboardWorksheet a {
+    position: absolute;
+}
+.storyboardWorksheet a:nth-of-type(5) {
+    bottom: 0;
+}
+.storyboardWorksheet a:nth-of-type(4) {
+    bottom: 1em;
+}
+.storyboardWorksheet a:nth-of-type(3) {
+    bottom: 2em;
+}
+.storyboardWorksheet a:nth-of-type(2) {
+    bottom: 3em;
+}
+.storyboardWorksheet a:nth-of-type(1) {
+    bottom: 4em;
+}
+a.spriteSheet {
+    color: #777;
+}
+iframe.projectScene {
+    width: 700px;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
+    background-color: #eee;
+}
+.strangelove h2 {
+    left: 42%;
+    width: 40%;
+}
+.gameImgs {
+    position: relative;
+    width: 100vw;
+}
+.gameImgs img {
+    cursor: pointer;
+}
+.noHeight {
+    height: 0;
+}
+img.drStrangelove, .strangeloveOri {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 39%;
+}
+.strangeloveOri {
+    height: 50%;
+    top: 50%;
+    text-align: right;
+}
+.strangeloveOri img {
+    width: 26%;
+    cursor: pointer;
+    float: right;
+}
+img.game {
+    width: 50%;
+    display: inline;
+    float: left;
+    margin-top: 5px;
+}
 
 /* ux */
 h1 {
@@ -381,6 +506,15 @@ iframe {
     div.toggleStage {
         height: 3em;
     }
+    .worksheetDesc {
+        height: 13em;
+    }
+    .worksheet {
+        top: 13em;
+    }
+    .story {
+        height: 175vw;
+    }
 
     /* ux */
     .introSH {
@@ -411,6 +545,18 @@ iframe {
     }
 }
 /* 768 */
+@media screen and (min-width: 48em){
+    .worksheetDesc {
+        height: 11em;
+    }
+    .worksheet {
+        top: 11em;
+    }
+    .story {
+        height: 157vw;
+    }
+}
+/* 896 */
 @media screen and (min-width: 56em){
     /* animation */
     .mrBall > div {
@@ -418,8 +564,22 @@ iframe {
         height: 44vw;
     }
     div.toggleStage {
-    height: 3em;
-}
+        height: 3em;
+    }
+    .story {
+        width: 81vw;
+        margin: 2em auto;
+    }
+    .storyIdeaStyleTile {
+        height: 61vw;
+    }
+    .storyboardWorksheet {
+        height: 45vw;
+    }
+    .story {
+        height: 135vw;
+    }
+
 
     /* ux */
     div.introSH, div.report, div.dilemma {
@@ -430,4 +590,24 @@ iframe {
         bottom: 350px;
     }
 }
+/* 1440 */
+@media screen and (min-width: 90em){
+    /* animation */
+    .mrBall > div {
+        width: 999px;
+        height: 666px;
+    }
+    div.toggleStage {
+        height: 3em;
+    }
+    .story {
+        width: 999px;
+    }
+    .storyIdeaStyleTile {
+        height: 710px;
+    }
+    .storyboardWorksheet {
+        height: 55vw;
+    }
+
 /* grid */

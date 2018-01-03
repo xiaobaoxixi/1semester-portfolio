@@ -1,7 +1,11 @@
 to do:
 
+a icon for all original work link 
+
+
 ANIMATION:
 hair move is: follow through, overlapping action, drag
+iframe use background image?
 
 UX:
 text into column
