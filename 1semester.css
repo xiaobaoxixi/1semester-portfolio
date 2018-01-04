@@ -41,6 +41,12 @@ main {
     overflow-x: hidden;
 }
 /* web */
+body#webDesign h1 {
+    display: inline;
+}
+body#webDesign span {
+    font-weight: bold;
+}
 .doubleSegment {
     width: 200vw;
 }
@@ -54,6 +60,9 @@ main {
 .redesign {
     background: green;
     left: 100vw;
+}
+.redesign.show {
+    left: 0;
 }
 .redesign.show {
     left: 0;
@@ -72,6 +81,15 @@ main {
 }
 p.frontpage {
     font-weight: bold;
+}
+p.responsive {
+    cursor: pointer;
+    color: #333;
+    font-size: .8em;
+    margin-left: 2.5em;
+    position: relative;
+    top: 3vw;
+    z-index: 1;
 }
 .wrapper {
     width: 80vw;
@@ -100,7 +118,7 @@ p.frontpage {
     background-position: center;
 }
 .frontpage .screen {
-    background-image: url(img/web/frontpage.png);
+    background-image: url(img/web/frontpage.jpg);
 }
 .homeOrCamera {
     width: 16%;
@@ -118,7 +136,7 @@ p.frontpage {
     border-radius: 1em;
 }
 .device.padV.frontpage .screen {
-    background-image: url(img/web/frontpage-padV.png);
+    background-image: url(img/web/frontpage-padV.jpg);
 }
 .device.padH {
     width: 75%;
@@ -126,7 +144,7 @@ p.frontpage {
     border-radius: 1em;
 }
 .device.computer.frontpage .screen {
-    background-image: url(img/web/frontpage-computer.png);
+    background-image: url(img/web/frontpage-computer.jpg);
 }
 .device.computer {
     width: 90%;
@@ -167,28 +185,28 @@ p.frontpage {
     bottom: .8em;
 }
 .navigation .screen {
-    background-image: url('img/web/navigation.png');
+    background-image: url('img/web/navigation.jpg');
 }
 .navigation.padV .screen {
-    background-image: url('img/web/navigation-padV.png');
+    background-image: url('img/web/navigation-padV.jpg');
 }
 .navigation.padH .screen {
-    background-image: url('img/web/navigation-padH.png');
+    background-image: url('img/web/navigation-padH.jpg');
 }
 .navigation.computer .screen {
-    background-image: url('img/web/navigation-computer.png');
+    background-image: url('img/web/navigation-computer.jpg');
 }
 .content .screen {
-    background-image: url('img/web/content.png');
+    background-image: url('img/web/content.jpg');
 }
 .content.padV .screen {
-    background-image: url('img/web/content-padV.png');
+    background-image: url('img/web/content-padV.jpg');
 }
 .content.padH .screen {
-    background-image: url('img/web/content-padH.png');
+    background-image: url('img/web/content-padH.jpg');
 }
 .content.computer .screen {
-    background-image: url('img/web/content-computer.png');
+    background-image: url('img/web/content-computer.jpg');
 }
 
 

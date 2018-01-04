@@ -3,6 +3,9 @@ all page add @media max-width<400
 a icon for all original work link 
 font
 
+WEB:
+transition animation when change screen sizes
+
 ANIMATION:
 hair move is: follow through, overlapping action, drag
 iframe use background image?

@@ -1,3 +1,6 @@
+let redesign = document.querySelector('.redesign');
+let toggleToRedesign = document.querySelector('.onOpArt');
+let toggleToOpArt = document.querySelector('.onRedesign');
 let toFrontpage = document.querySelector('p.frontpage');
 let toContent = document.querySelector('p.content');
 let toNavigation = document.querySelector('p.navigation');
@@ -27,7 +30,16 @@ function toPhone(){
     device.classList.remove('padV');
     computerBase.style.display = "none";
 }
-// default start
+// toggle between 2 main parts
+toggleToRedesign.addEventListener('click', toRedesign);
+function toRedesign(){
+    redesign.classList.add('show');
+}
+toggleToOpArt.addEventListener('click', toOpArt);
+function toOpArt(){
+    redesign.classList.remove('show');
+}
+// default start with frontpage
 displayFrontPage();
 // click on frontpage
 toFrontpage.addEventListener('click', displayFrontPage);
