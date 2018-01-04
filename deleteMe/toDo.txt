@@ -1,5 +1,5 @@
 to do:
-
+all page add @media max-width<400
 a icon for all original work link 
 font
 
