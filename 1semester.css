@@ -1,4 +1,4 @@
-/* 529 */
+/* line: 529 */
 * {
     margin: 0;
     padding: 0;
@@ -41,10 +41,7 @@ main {
     overflow-x: hidden;
 }
 
-/* animation
-body#animation a {
-    margin-left: 5em;
-}*/
+/* animation */
 .mrBall > div {
     width: 90vw;
     height: 60vw;
@@ -298,7 +295,6 @@ div.infoSH {
     width: 80%;
     height: auto;
     padding: 1em;
-    border: 1px solid black;
     border-radius: 1em;
     background-color: white;
     position: absolute;
@@ -320,6 +316,7 @@ div.infoSH.show {
     height: 530px;
 }
 img.hub {
+    width: 100%;
     position: absolute;
     bottom: 0;
 }
@@ -350,7 +347,7 @@ div.line1 p {
     animation: showP .5s .7s forwards;
 }
 div.line2 p {
-    animation: showP .7s 5.2s forwards;
+    animation: showP .7s 4.2s forwards;
 }
 div.line3 p {
     animation: showP 1s 2.1s ease-out forwards;
@@ -424,7 +421,7 @@ div.line2 {
     right: 60%;
 }
 div.line2.lineAnimation2 {
-    animation: line2UpLeft 1s 4.1s ease-out forwards;
+    animation: line2UpLeft 1s 3.1s ease-out forwards;
 }
 @keyframes line2UpLeft {
     50% {
@@ -488,6 +485,17 @@ a.pdf {
         height: auto;
         opacity: 1;
     }
+}
+.report .original {
+    width: 95px;
+    bottom: 0em;
+    left: 3em;
+}
+.report {
+    padding-bottom: 3em;
+}
+.bmc img {
+    width: 100%;
 }
 img.pdf {
     width: 20px;
@@ -553,6 +561,12 @@ img.logo {
 }
 .pitch a {
     margin-left: 0em;
+}
+img.pitchOriginalIcon {
+    position: inherit;
+    width: 200px;
+    margin-left: calc(50vw - 100px);
+    margin-bottom: 10px;
 }
 iframe {  /* which one is this? */
     width: 100%;

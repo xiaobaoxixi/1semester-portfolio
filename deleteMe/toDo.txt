@@ -10,7 +10,8 @@ hover on games img show hint of which game
 
 
 UX:
-text into column
+!!!!!!! CSS !!!!!!!
+long text into columns
 2x2 img when screen wide
 more minus button to fixed position?
 !!! use grid to rearrage elements
