@@ -70,6 +70,9 @@ main {
 .redesign .sideToggle {
     left: 0;
 }
+p.frontpage {
+    font-weight: bold;
+}
 .wrapper {
     width: 80vw;
     height: 75vw;
@@ -92,10 +95,12 @@ main {
     width: 90%;
     height: 80%;
     border: 1px solid black;
-    background-image: url(img/web/frontpage.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+.frontpage .screen {
+    background-image: url(img/web/frontpage.png);
 }
 .homeOrCamera {
     width: 16%;
@@ -103,6 +108,7 @@ main {
     bottom: .3em;
     left: 42%;
 }
+
 .homeOrCameraFull {
     display: none;
 }
@@ -111,7 +117,7 @@ main {
     height: 80%;
     border-radius: 1em;
 }
-.device.padV .screen {
+.device.padV.frontpage .screen {
     background-image: url(img/web/frontpage-padV.png);
 }
 .device.padH {
@@ -119,7 +125,7 @@ main {
     height: 50%;
     border-radius: 1em;
 }
-.device.computer .screen {
+.device.computer.frontpage .screen {
     background-image: url(img/web/frontpage-computer.png);
 }
 .device.computer {
@@ -154,7 +160,36 @@ main {
     left: 47%;
     top: .5em;
 }
-
+.computerBase {
+    width: 104%;
+    position: absolute;
+    left: -7%;
+    bottom: .8em;
+}
+.navigation .screen {
+    background-image: url('img/web/navigation.png');
+}
+.navigation.padV .screen {
+    background-image: url('img/web/navigation-padV.png');
+}
+.navigation.padH .screen {
+    background-image: url('img/web/navigation-padH.png');
+}
+.navigation.computer .screen {
+    background-image: url('img/web/navigation-computer.png');
+}
+.content .screen {
+    background-image: url('img/web/content.png');
+}
+.content.padV .screen {
+    background-image: url('img/web/content-padV.png');
+}
+.content.padH .screen {
+    background-image: url('img/web/content-padH.png');
+}
+.content.computer .screen {
+    background-image: url('img/web/content-computer.png');
+}
 
 
 
