@@ -6,6 +6,10 @@ let president = document.querySelector('img.president');
 let drStrangelove = document.querySelector('img.drStrangelove');
 let pilot = document.querySelector('img.pilot');
 let plane = document.querySelector('img.plane');
+let moreButton = document.querySelector('img.moreButton');
+let closeButton = document.querySelector('img.closeButton');
+let strangeloveInfo = document.querySelector('.strangeloveInfo');
+
 // toggle stage for mr.ball
 toggleStageSpan.forEach(clickSpan);
 function clickSpan(s){
@@ -50,4 +54,14 @@ function openPilot(){
 drStrangelove.addEventListener('click', openDrStrangelove);
 function openDrStrangelove(){
     window.open('http://onestepfurther.science/kea/02-animation/strangelove/intro.html', '_blank');
+}
+
+// toggle more info of strangelove
+moreButton.addEventListener('click', showMoreInfo);
+closeButton.addEventListener('click', closeMoreInfo);
+function showMoreInfo(){
+    strangeloveInfo.classList.remove('hide');
+}
+function closeMoreInfo(){
+    strangeloveInfo.classList.add('hide');
 }

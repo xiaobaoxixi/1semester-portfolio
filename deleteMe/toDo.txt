@@ -1,11 +1,13 @@
 to do:
 
 a icon for all original work link 
-
+font
 
 ANIMATION:
 hair move is: follow through, overlapping action, drag
 iframe use background image?
+hover on games img show hint of which game
+
 
 UX:
 text into column

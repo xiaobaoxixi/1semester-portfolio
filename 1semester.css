@@ -1,3 +1,4 @@
+/* 529 */
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +18,13 @@ img {
     border: 0;
     width: 100%;
     height: auto;
+    width: auto;
 }
-img.more {
+img.original {
+    position: absolute;
+    cursor: default;
+}
+img.more, img.closeButton, img.moreButton {
     cursor: pointer;
 }
 .mainNav {
@@ -35,10 +41,10 @@ main {
     overflow-x: hidden;
 }
 
-/* animation */
+/* animation
 body#animation a {
     margin-left: 5em;
-}
+}*/
 .mrBall > div {
     width: 90vw;
     height: 60vw;
@@ -46,7 +52,7 @@ body#animation a {
     border: 1px solid black;
     position: relative;
 }
-div.toggleStage {
+div.toggleStage, div.mrBallOri {
     height: 3em;
     padding-top: 1em;
 }
@@ -90,8 +96,9 @@ div.toggleStage {
     bottom: 0;
 }
 .story {
-    height: 190vw;
+    height: 180vw;
     min-height: 912px;
+    overflow: hidden;
 }
 .storyIdeaStyleTile, .storyboardWorksheet {
     margin: 2em 0;
@@ -103,8 +110,17 @@ div.toggleStage {
     position: relative;
 }
 .storyIdeaStyleTile {
+    margin-top: 0;
     height: 76vw;
     background-image: url(img/animation/storytile.jpg);
+}
+.storyIdeaStyleTile a, .worksheet a {
+    margin-left: 5em;
+}
+.storyIdeaStyleTile img.originalDown {
+    height: 2em;
+    bottom: -2em;
+    left: 5em;
 }
 .storyboardWorksheet {
     height: 73vw;
@@ -121,6 +137,10 @@ div.toggleStage {
     padding: 2em 0 1em 6em;
     overflow-y: scroll;
     font-size: .8em;
+    cursor: s-resize;
+}
+.storyDesc:first-of-type {
+
 }
 .storyDesc > p {
     font-size: .85em;
@@ -136,11 +156,12 @@ div.toggleStage {
 }
 .worksheet {
     width: 90vw;
-    height: 47vw;
+    height: 52vw;
     max-width: 960px;
     max-height: calc(362px + 5em);
     position: absolute;
-    top: 15em;
+    top: 13em;
+    left: 3vw;
     overflow: scroll;
 }
 .worksheet img {
@@ -149,8 +170,22 @@ div.toggleStage {
     top: 0;
     cursor: pointer;
 }
+.worksheetOri {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7em;
+}
+.worksheetOri img.originalRight {
+    height: 5em;
+    width: auto;
+    top: 1.9em;
+    right: 0;
+    cursor: default;
+}
 .storyboardWorksheet a {
     position: absolute;
+    right: 3em;
 }
 .storyboardWorksheet a:nth-of-type(5) {
     bottom: 0;
@@ -170,16 +205,32 @@ div.toggleStage {
 a.spriteSheet {
     color: #777;
 }
+.animationProjects {
+    overflow-y: hidden;
+}
+.jsProjectsOri {
+    text-align: right;
+    padding-right: 1em;
+}
 iframe.projectScene {
-    width: 700px;
-    height: 700px;
-    display: block;
-    margin: 0 auto;
+    width: 65vw;
+    height: 65vw;
+    float: right;
     background-color: #eee;
 }
+.afterIframe {
+    font-size: .8em;
+    color: #777;
+    position: absolute;
+    bottom: 0;
+    right: .5em;
+}
 .strangelove h2 {
-    left: 42%;
-    width: 40%;
+    text-align: left;
+    margin-left: 2em;
+}
+.strangelove p {
+    margin: 0 .5em 1em 3em;
 }
 .gameImgs {
     position: relative;
@@ -188,14 +239,11 @@ iframe.projectScene {
 .gameImgs img {
     cursor: pointer;
 }
-.noHeight {
-    height: 0;
-}
 img.drStrangelove, .strangeloveOri {
-    width: 40%;
+    width: 41%;
     position: absolute;
     top: 0;
-    left: 39%;
+    left: 55%;
 }
 .strangeloveOri {
     height: 50%;
@@ -203,12 +251,31 @@ img.drStrangelove, .strangeloveOri {
     text-align: right;
 }
 .strangeloveOri img {
-    width: 26%;
-    cursor: pointer;
+    width: 20%;
     float: right;
+    position: absolute;
+    right: 0;
+    bottom: 5em;
+}
+.strangeloveInfo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    font-weight: bold;
+    text-align: left;
+}
+.strangeloveInfo p {
+    margin-left: 2em;
+}
+.strangeloveInfo p:first-of-type {
+    margin-top: 2em;
 }
 img.game {
     width: 50%;
+    max-width: 500px;
     display: inline;
     float: left;
     margin-top: 5px;
@@ -487,7 +554,7 @@ img.logo {
 .pitch a {
     margin-left: 0em;
 }
-iframe {
+iframe {  /* which one is this? */
     width: 100%;
     height: 0;
     border: none;
@@ -503,19 +570,23 @@ iframe {
         width: 81vw;
         height: 54vw;
     }
-    div.toggleStage {
+    div.toggleStage, div.mrBallOri {
         height: 3em;
     }
     .worksheetDesc {
         height: 13em;
     }
     .worksheet {
-        top: 13em;
+        top: 11em;
+        left: 2vw;
     }
     .story {
-        height: 175vw;
+        height: 170vw;
     }
-
+    iframe.projectScene {
+        width: 68vw;
+        height: 68vw;
+    }
     /* ux */
     .introSH {
         height: 650px;
@@ -550,10 +621,21 @@ iframe {
         height: 11em;
     }
     .worksheet {
-        top: 11em;
+        top: 9em;
+        left: 1vw;
+        height: 45vw;
     }
     .story {
-        height: 157vw;
+        height: 147vw;
+        max-height: 1300px;
+    }
+    iframe.projectScene {
+        width: 73vw;
+        height: 73vw;
+    }
+    img.drStrangelove, .strangeloveOri {
+        width: 39%;
+        left: 400px;
     }
 }
 /* 896 */
@@ -563,11 +645,13 @@ iframe {
         width: 66vw;
         height: 44vw;
     }
-    div.toggleStage {
+    div.toggleStage, div.mrBallOri {
         height: 3em;
     }
     .story {
         width: 81vw;
+        height: 135vw;
+        max-height: 1400px;;
         margin: 2em auto;
     }
     .storyIdeaStyleTile {
@@ -576,11 +660,24 @@ iframe {
     .storyboardWorksheet {
         height: 45vw;
     }
-    .story {
-        height: 135vw;
+    .animationProjects {
+        width: 81vw;
     }
-
-
+    .worksheet {
+        top: 11em;
+    }
+    .worksheetOri {
+        width: 70%;
+        right: 10em;
+    }
+    iframe.projectScene {
+        max-height: 700px;
+        max-width: 700px;
+    }
+    img.drStrangelove, .strangeloveOri {
+        width: 370px;
+        left: 400px;
+    }
     /* ux */
     div.introSH, div.report, div.dilemma {
         width: 860px;
@@ -590,6 +687,11 @@ iframe {
         bottom: 350px;
     }
 }
+/* 1000 */
+@media screen and (min-width: 1000px){
+    .gameImgs {
+        margin-left: calc(50vw - 500px);
+}
 /* 1440 */
 @media screen and (min-width: 90em){
     /* animation */
@@ -597,7 +699,7 @@ iframe {
         width: 999px;
         height: 666px;
     }
-    div.toggleStage {
+    div.toggleStage, div.mrBallOri {
         height: 3em;
     }
     .story {
@@ -609,5 +711,5 @@ iframe {
     .storyboardWorksheet {
         height: 55vw;
     }
-
+}
 /* grid */
