@@ -21,7 +21,7 @@ VIDEO:
 click to turn storyboard
 input storyboard text
 draw frist image for both videos, click on image transit to video
-
+add original icon to iframe
 
 
 
