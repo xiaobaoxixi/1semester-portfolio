@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Animation</title>
     <link rel="stylesheet" href="1semester.css">
+    <link rel="stylesheet" href="ballGame.css">
+
 </head>
 
 <body id="animation">
@@ -12,7 +14,6 @@
     <button><a href="index.html">Home</a></button>
     <button><a href="about.html">About</a></button>
     <button class="toggleProjectList">Project List</button>
-
     <nav class="projectList">
         <ul>
           <li>01.04. Responsive Website - Op Art</li>
@@ -27,9 +28,46 @@
         </ul>
     </nav>
     </section>
+        <audio id="sillyBall">
+        <source src="audio/silly-ball.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="chu">
+        <source src="audio/chu-fade-in.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wind">
+        <source src="audio/wind.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bounce">
+        <source src="audio/bounce.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="shot">
+        <source src="audio/arrow-shot.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="fall">
+        <source src="audio/fall.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="shake">
+        <source src="audio/shake.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="night">
+        <source src="audio/night-long-fade-out.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="night2">
+        <source src="audio/night2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="snorring">
+        <source src="audio/snorring.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="snorringShort">
+        <source src="audio/snorring-short.mp3" type="audio/mpeg">
+    </audio>
     <main>
         <div class="segment mrBall">
             <h2>Animations</h2>
+            <div class="stage mrBallSimple">
+                <iframe src="mrBall/ballGame-autoplay.html"></iframe>
+            </div>
+            <!--
             <div class="toggleStage">
                 <span class="selected span1">The simple</span>
                 <span class="span2">The more</span>
@@ -41,7 +79,8 @@
                     <p>principle: squash and stretch, follow through</p>
                     <p>click to start animation</p>
                 </div>
-                <div class="mrBallSample mrBallLow">rush on stage</div>
+                <div class="mrBallSample mrBallLow">
+                </div>
                 <div class="mrBallSample mrBallWide">rolling across</div>
                 <div class="mrBallSample mrBallTall">bounce</div>
             </div>
@@ -62,7 +101,7 @@
                     <p>click to start animation</p>
                 </div>
                 <div class="mrBallSample mrBallFull">they found me</div>
-            </div>
+            </div> -->
             <div class="mrBallOri">
                 <a href="http://onestepfurther.science/kea/02-animation/version2/ballGame.html">The original assignment</a>
             </div>

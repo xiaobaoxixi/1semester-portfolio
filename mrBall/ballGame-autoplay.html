@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ballGame.css">
+    <title>theBall(s)Game</title>
+</head>
+
+<body>
+    <audio id="sillyBall">
+        <source src="audio/silly-ball.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="chu">
+        <source src="audio/chu-fade-in.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wind">
+        <source src="audio/wind.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bounce">
+        <source src="audio/bounce.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="shot">
+        <source src="audio/arrow-shot.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="fall">
+        <source src="audio/fall.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="shake">
+        <source src="audio/shake.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="night">
+        <source src="audio/night-long-fade-out.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="night2">
+        <source src="audio/night2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="snorring">
+        <source src="audio/snorring.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="snorringShort">
+        <source src="audio/snorring-short.mp3" type="audio/mpeg">
+    </audio>
+    <div class="scene">
+        <div class="fakeBallWrapper"></div>
+        <div class="ballVertical">
+            <div class="ballHorizontal">
+                <img id="ball" src="image/ball.png" alt="a ball">
+                <img id="ballGotShot" src="image/ballGotShot.png" alt="ball got shot">
+            </div>
+        </div>
+        <div class="horizon"></div>
+        <div class="shadow"></div>
+        <div class="wind"></div>
+        <div id="eyes1">
+            <div class="eye eye1"></div>
+            <div class="eye eye2"></div>
+        </div>
+        <div id="eyes2">
+            <div class="eye eye1"></div>
+            <div class="eye eye2"></div>
+        </div>
+        <div class="volumeControl">
+            <img class="volume" id="volumeOn" src="image/volume-on.png" alt="volume on icon">
+            <img class="volume" id="volumeOff" src="image/volume-off.jpg" alt="volume off icon">
+        </div>
+        <div class="directionControl">
+            <div id="left">left</div>
+            <div id="right">left</div>
+            <div id="up">up</div>
+            <div id="down">down</div>
+            <div id="zoomIn">zoom in</div>
+            <div id="zoomOut">zoom out</div>
+        </div>
+    </div>
+    <script src="ballGame-autoplay.js"></script>
+</body>
+
+</html>

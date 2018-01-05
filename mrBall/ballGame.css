@@ -1,0 +1,975 @@
+.scene {
+    position: relative;
+    height: 60vh;
+    width: 86vw;
+    margin: 2em auto 1em 7vw;
+    background: white;
+    overflow: hidden;
+}
+.volumeControl {
+    width: 5vw;
+    min-width: 50px;
+    height: 5vw;
+    min-height: 50px;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+img#volumeOn, img#volumeOff {
+    width: 77%;
+    height: 77%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    display: none;
+}
+.horizon {
+    width: 99%;
+    height: 1px;
+    border-top: 1px solid #222;
+    position: absolute;
+    bottom: 17.5vh;
+}
+.horizonGlow {
+    width: 99%;
+    height: 1px;
+    border-top: 4px solid #222;
+    position: absolute;
+    bottom: 17.5vh;
+    opacity: .07;
+}
+.scene img, img.stop, #ballShot { /*the first ball*/
+    z-index: 1;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 17vh;
+    margin-left: -7vw; /*out of scene */
+}
+.ballWrapper, .fakeBallWrapper, .ballWrapper.stop2, .ball2Vertical, .ball2Horizontal, .ball2Vertical.stop2, .ball2Horizontal.stop2 {
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    left: -7vw;
+    bottom: 17vh;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.fakeBallWrapper { /* lazy solution, in mirror animation, show fakeball as original and mirror the real ball to other location*/
+    background-image: url("image/ball.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+img#ball2, img#ball3 {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.shadow, #eyes1, #eyes2, .wind, .directionControl {
+    display: none; /* not all animation has these elements */
+}
+#eyes1, #eyes2 {
+    position: absolute;
+}
+#eyes1 {
+    top: 7vh;
+    left: 53vw;
+    width: 7vw;
+    height: 1.5vw;
+    padding: 0 .5vw
+}
+#eyes2 {
+    top: 13vh;
+    left: 71vw;
+    width: 9vw;
+    height: 2.1vw;
+    padding: 0 .5vw
+}
+.eye {
+    width: 30%;
+    height: 95%;
+    border-radius: 60%;
+    background: gold;
+    position: absolute;
+}
+.eye1 {
+    left: 0;
+}
+.eye2 {
+    right: 0;
+}
+.shadowjump, .shadowoneJump {
+    display: inherit;
+    position: absolute;
+    top: 42.5vh;
+    left: 24.5vw;
+    width: 4vw;
+    height: 1vh;
+    background-color: #313131;
+    border-radius: 50%;
+    opacity: 1;
+}
+.stopIcon {
+    cursor: crosshair;
+    border-radius: 50%;
+    text-align: left;
+    padding-left: 1.5vw;
+    font-family: monospace;
+    font-weight: bold;
+    position: absolute;
+}
+.allButtonArea {
+    width: 90vw;
+    height: 17em;
+    margin: 0 auto;
+    position: relative;
+}
+.buttonAreaSimple {
+    width: 50%;
+    height: 17em;
+    position: absolute;
+    left: 0;
+}
+.buttonAreaMore {
+    width: 37%;
+    height: 17em;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    z-index: 1;
+}
+.moreBalls {
+    width: 35%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+}
+#stop {
+    z-index: 3;
+    width: 16vw;
+    height: 16vw;
+    background-color: rgba(255,255,0,.8);
+    padding-top: 4vw;
+    padding-left: 2.5vw;
+    font-size: 2.7vw;
+    line-height: 2.8vw;
+    left: 38vw;
+    bottom: -3vw;
+}
+#stop2 {
+    z-index: 2;
+    width: 9vw;
+    height: 9vw;
+    background-color: hotpink;
+    opacity: .9;
+    padding-top: 2.5vw;
+    font-size: 1.4vw;
+    line-height: 1.5vw;
+    right: 27vw;
+    bottom: 7vw;
+}
+.bandage1 {
+    width: 4.3vw;
+    position: absolute;
+    right: 1.3vw;
+    top: 1.9vw;
+}
+.bandage2 {
+    width: 1.7vw;
+    position: absolute;
+    right: 1.1vw;
+    top: 1.3vw;
+}
+.buttonArea p {
+    color: #777;
+    margin: 1em 0 .3em 0;
+}
+button {
+    width: 35%;
+    min-width: 100px;
+    height: 2.3em;
+    font-size: .8em;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-top: .5em;
+    border: 1px dotted black;
+    background-color: #ccc;
+    border-radius: .5em;
+}
+.moreBalls button {
+    height: 2em;
+    font-size: .7em;
+    font-weight: 300;
+    vertical-align: middle;
+    margin-top: .3em;
+}
+button:focus {
+    color: white;
+}
+.codeAndUnfinished {
+    background: black;
+    margin-top: 1em;
+    padding: 2em;
+    padding-left: 7vw;
+    height: auto;
+    position: relative;
+    color: #bbb;
+}
+h2 {
+    margin-bottom: 1em;
+    color: #777;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.7em;
+    margin-bottom: .3em;
+}
+.note {
+    height: 2em;
+    width: 83vw;
+    overflow: hidden;
+    cursor: s-resize;
+}
+.note.clicked {
+    animation: toggleNoteArea .7s ease-in forwards;
+    cursor: n-resize;
+}
+@keyframes toggleNoteArea {
+    to {
+        height: auto;
+    }
+}
+.js img {
+    width: 643px;
+}
+ul {
+    list-style: circle;
+}
+li {
+    margin-bottom: .3em;
+    margin-left: 2em;
+}
+/* animations */
+.move {
+    animation: move 5.37s .3s linear alternate 2;
+}
+@keyframes move {
+    to {
+        transform: translate(103vw, 0) rotate(1440deg);
+    }
+}
+.moveTo30 {
+    animation: moveTo30 .23s .13s forwards cubic-bezier(0, 0, 0.5, 1.3);
+}
+@keyframes moveTo30 {
+    to {
+        transform: translateX(30vw) rotate(367deg);
+    }
+}
+.moveFrom30 {
+    animation: moveFrom30 4s forwards cubic-bezier(0.65, 0, 0.41, 1.41);
+}
+@keyframes moveFrom30 {
+    0% {
+        transform: translateX(30vw) rotate(367deg) scale(1);
+    }
+    100% {
+        transform: translateX(82.3vw) rotate(1260deg) scale(1);
+    }
+}
+.windmoveFrom30 {
+    display: inherit;
+    width: 11vw;
+    height: 6vw;
+    position: absolute;
+    top: 34vh;
+    left: 0vw;
+    background-image: url("image/wind.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: wind 2s forwards;
+}
+@keyframes wind {
+    0% {
+        opacity: .2;
+        transform: translateX(-8vw);
+        animation-timing-function: ease-in;
+    }
+    43% {
+        opacity: .5;
+        transform: translateX(3vw);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(31vw);
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    }
+}
+.oneJump {
+    animation: oneJump 1s forwards;
+}
+@keyframes oneJump {
+    0%, 10% {
+        transform: translate(30vw, 0);
+        animation-timing-function: cubic-bezier(0,0,0,1);
+    }
+    5% {
+        transform: translate(30vw, 0) scale(1.5, .6);
+        transform-origin: bottom;
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    45% {
+        transform: translate(30vw, -33vh);
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    90% {
+        transform: translate(30vw, 0);
+        animation-timing-function: ease-out;
+    }
+    93% {
+        transform: translate(30vw, .5vh) scale(1.1, .9);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translate(30vw, 0) scale(1);
+    }
+}
+.shadowoneJump {
+    animation: shadowOne 1s cubic-bezier(0,-0.01, 0.07, 1);
+}
+@keyframes shadowOne {
+    0%, 10%, 100% {
+        transform: scale(1);
+        opacity: .8;
+        animation-timing-function: cubic-bezier(0,0,0,1);
+    }
+    5% {
+        transform: scale(1.5);
+        opacity: .9;
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    45% {
+        transform: scale(.3);
+        opacity: .5;
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    90% {
+        transform: scale(1);
+        opacity: .8;
+        animation-timing-function: ease-out;
+    }
+    93% {
+        transform: scale(1.1);
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+}
+.jump {
+    animation: jump 1s infinite;
+}
+@keyframes jump {
+    0% {
+        transform: translate(30vw, -37vh) scale(.95);
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    45% {
+        transform: translate(30vw, .3vh);
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    50% {
+        transform: translate(30vw, .4vh) scale(1.2, .8);
+        animation-timing-function: ease-out;
+    }
+    55% {
+        transform: translate(30vw, 1.3vh) scale(1.4, .7);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: translate(30vw, .4vh) scale(.9, 1.1);
+        animation-timing-function: cubic-bezier(0,0,0,1);
+    }
+    100% {
+        transform: translate(30vw, -37vh) scale(.95);
+    }
+}
+.shadowjump {
+    animation: shadow 1s infinite;
+}
+@keyframes shadow {
+    0% {
+        transform: scale(.7);
+        opacity: .3;
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    45% {
+        transform: scale(1.3);
+        opacity: .8;
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+    50%, 60% {
+        transform: scale(1.7);
+        opacity: .9;
+        animation-timing-function: cubic-bezier(0,0,0,1);
+    }
+    55% {
+        transform: scale(2);
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: scale(.7);
+        opacity: .3;
+    }
+}
+.fade {
+    animation: fade 4s ease forwards;
+}
+@keyframes fade {
+    0% {
+        transform: translate(30vw, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(30vw, 0);
+        opacity: 0;
+    }
+}
+div.bgfade {
+    animation: darkenBackground 3s cubic-bezier(0, 0, 0.17, 0.97) forwards;
+}
+@keyframes darkenBackground {
+    to {
+        background: #111;
+    }
+}
+.glow {
+    animation: glow 1.4s .5s linear forwards;
+}
+@keyframes glow {
+    0% {
+        transform: translate(30vw, 0);
+        opacity: .05;
+    }
+    30% {
+        transform: translate(30vw, 0);
+        opacity: .15;
+    }
+    60%, 90% {
+        transform: translate(30vw, 0);
+        opacity: .2;
+        filter: drop-shadow(.5vw -.1vw .3vw rgba(255,255,0, .3));
+    }
+    100% {
+        transform: translate(30vw, 0);
+        opacity: .3;
+        filter: drop-shadow(.7vw -.3vw .3vw rgba(255,255,0, .35));
+    }
+}
+div.bgglow {
+    background: #111;
+}
+#eyes1.glow {
+    display: inherit;
+    transform: rotateX(90deg);
+    transform-origin: center;
+    animation: eyes1Blink 2s 2.5s forwards;
+}
+@keyframes eyes1Blink {
+    0%, 44%, 83% {
+        transform: rotateX(89deg);
+        transform-origin: center;
+    }
+    7%, 40%, 45%, 80%, 85%, 100% {
+        transform: rotateX(0);
+        transform-origin: center;
+    }
+}
+#eyes2.glow {
+    display: inherit;
+    transform: rotateX(90deg);
+    animation: eyes2Blink 2.4s 3.7s 1 forwards;
+}
+@keyframes eyes2Blink {
+    0%, 60% {
+        transform: rotateX(89deg);
+        transform-origin: center;
+    }
+    3%, 55%, 62%, 100% {
+        transform: rotateX(0);
+    }
+}
+#eyes1.eyes1MoveClose {
+    animation: eyes1MoveClose 1.2s ease forwards;
+    display: inherit;
+}
+@keyframes eyes1MoveClose {
+    0% {
+        transform: translate(0,0) rotate(0) scale(.9);
+    }
+    28% {
+        transform: translate(-2vw,2vh) rotate(0) scale(1);
+    }
+    29% {
+        transform: translate(-2vw,2vh) rotateX(80deg) scale(1);
+    }
+    62% {
+        transform: translate(-6vw,7vh) rotate(0) scale(1.1);
+    }
+    90% {
+        transform: translate(-9vw,16vh) rotate(0) scale(1.1);
+    }
+    100% {
+        transform: translate(-7vw, 20vh) rotateY(53deg) rotateX(20deg) scale(1.2, 1.3);
+        transform-origin: left;
+    }
+}
+#eyes2.eyes2MoveClose {
+    animation: eyes2MoveClose .2s 1.7s ease-in forwards;
+    display: inherit;
+}
+@keyframes eyes2MoveClose {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: translate(-15vw, -3vh) rotateY(53deg) skewX(28deg) scale(1.4, 1.4);
+        transform-origin: left;
+    }
+}
+#eyes1.eyes1BackOff {
+    animation: eyes1BackOff 1.5s forwards;
+    display: inherit;
+}
+@keyframes eyes1BackOff {
+    0%, 100% {
+        transform: translate(-7vw, 20vh) rotateY(53deg) rotateX(20deg) scale(1.2, 1.3);
+        animation-timing-function: ease-out;
+    }
+    5%, 79% {
+        transform: translate(-3vw,13vh) rotateY(53deg) rotateX(20deg) scale(1.4);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translate(-9vw, 23vh) rotateY(63deg) rotateX(19deg) scale(1.5, 1.3);
+        animation-timing-function: ease-out;
+    }
+}
+.snorring {
+    animation: snorring 3.13s infinite;
+}
+@keyframes snorring {
+    0%, 90%, 100% {
+        transform: translate(30vw, 0) scale(1, 1);
+        opacity: .3;
+        filter: drop-shadow(.7vw -.3vw .3vw rgba(255,255,0, .35));
+        animation-timing-function: ease-in;
+    }
+    35% {
+        transform: translate(30vw, 0) scale(.9, 1.1);
+        opacity: .4;
+        filter: drop-shadow(1vw -.3vw .3vw rgba(255,255,0, .4));
+        animation-timing-function: ease-in;
+    }
+}
+.snorringShort {
+    animation: snorringShort 3.13s 3 forwards;
+}
+@keyframes snorringShort {
+    0%, 90%, 100% {
+        transform: translate(30vw, 0) scale(1, 1);
+        opacity: .3;
+        filter: drop-shadow(.7vw -.3vw .3vw rgba(255,255,0, .35));
+        animation-timing-function: ease-in;
+    }
+    35% {
+        transform: translate(30vw, 0) scale(.9, 1.1);
+        opacity: .35;
+        filter: drop-shadow(1vw -.3vw .3vw rgba(255,255,0, .4));
+        animation-timing-function: ease-in;
+    }
+}
+.snorringFast {
+    animation: snorringFast 1.04s forwards;
+}
+@keyframes snorringFast {
+    0%, 90%, 100% {
+        transform: translate(30vw, 0) scale(1, 1);
+        opacity: .25;
+        filter: drop-shadow(.7vw -.3vw .3vw rgba(255,255,0, .35));
+        animation-timing-function: ease-in;
+    }
+    35% {
+        transform: translate(30vw, 0) scale(.9, 1.1);
+        opacity: .35;
+        filter: drop-shadow(1vw -.3vw .3vw rgba(255,255,0, .4));
+        animation-timing-function: ease-in;
+    }
+}
+#ball.onStage { /* need this to show a ball before gunshot */
+    margin-left: 23vw;
+}
+.ballGotShotfallDown {
+    animation: fallDawn .67s cubic-bezier(1, 0, .93, .83) forwards;
+}
+@keyframes fallDawn {
+    0%, 20% {
+        transform: translate(30vw, 0) rotateY(0);
+    }
+    10% {
+        transform: translate(30vw, 0) rotateY(17deg);
+    }
+    100% {
+        transform: translate(30vw, 0) rotateY(-31deg) rotateX(88deg);
+        transform-origin: bottom;}
+}
+.shake {
+    animation: shake .08s ease-in 5 forwards;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translate(30vw, 0);
+    }
+    50% {
+        transform: translate(30.4vw, 0);
+    }
+}
+.mirror {
+    animation: mirror .10s ease-in forwards;
+}
+@keyframes mirror {
+    0% {
+        transform: translate(30vw, 0) scale(1, 1);
+    }
+    70% {
+        transform: translate(53vw, 0) scale(.5, 1);
+        opacity: .5;
+    }
+    80% {
+        transform: translate(57vw, 0) scale(0, 1);
+        opacity: 0;
+    }
+    90% {
+        transform: translate(60vw, 0) scale(-.5, 1);
+        opacity: .5;
+    }
+    100% {
+        transform: translate(62vw, 0) scale(-1, 1);
+        opacity: 1;
+    }
+}
+/* part 2, seperate X and Y motion*/
+#ball2.bounceWithForce {
+    animation: changeShapePower .6s 5;
+}
+@keyframes changeShapePower {
+    0%, 38%, 45%, 100% {
+        transform: scale(1);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+    }
+    40% {
+        transform: scale(1.2, .8);
+        animation-timing-function: cubic-bezier(0, 0, 0.3, 1);
+    }
+    43% {
+        transform: scale(.8, 1.2);
+    }
+}
+.ball2Horizontal.bounceWithForce {
+    animation: bounceWithForceX 3s linear forwards;
+    bottom: 0;
+}
+@keyframes bounceWithForceX {
+    from {
+        transform: translateX(0) rotate(0);
+    }
+    to {
+        transform: translateX(100vw) rotate(360deg);
+    }
+}
+.ball2Vertical.bounceWithForce {
+    animation: bounceWithForceY .6s 5;
+    bottom: 0;
+}
+@keyframes bounceWithForceY {
+    0%, 100% {
+        transform: translateY(-37vh);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+    }
+    40% {
+        transform: translateY(-17vh);
+        animation-timing-function: cubic-bezier(0, 0, 0.3, 1);
+    }
+}
+#ball2.bounceNatural {
+    animation: changeShapeNatural 3s;
+}
+@keyframes changeShapeNatural {
+    0%, 5%, 7%, 12%, 17%, 19%, 24%, 29%, 31%, 36%, 41%, 43%, 48%, 52%, 54%, 63%, 65%, 72%, 74%, 100% {
+        transform: scale(1);
+        animation-timing-function: ease-in;
+    }
+    6%, 18%, 30%, 42%, 53%, 64%, 73% {
+        transform: scale(1.05, .93);
+        animation-timing-function: ease-out;
+    }
+}
+.ball2Horizontal.bounceNatural {
+    animation: bounceNaturalX 3s ease-out forwards;
+    bottom: 0;
+}
+@keyframes bounceNaturalX {
+    from {
+        transform: translateX(0) rotate(0);
+    }
+    to {
+        transform: translateX(100vw) rotate(450deg);
+    }
+}
+.ball2Vertical.bounceNatural {
+    animation: bounceNaturalY 3s forwards;
+    bottom: 0;
+}
+@keyframes bounceNaturalY {
+    0% {
+        transform: translateY(-37vh);
+        animation-timing-function: ease-in;
+    }
+    6% {
+        transform: translateY(-17vh);
+        animation-timing-function: ease-out;
+    }
+    12% {
+        transform: translateY(-33vh);
+        animation-timing-function: ease-in;
+    }
+    18% {
+        transform: translateY(-17vh);
+        animation-timing-function: ease-out;
+    }
+    24% {
+        transform: translateY(-29vh);
+        animation-timing-function: ease-in;
+    }
+    30% {
+        transform: translateY(-17vh);
+        animation-timing-function: ease-out;
+    }
+    36% {
+        transform: translateY(-26vh);
+        animation-timing-function: ease-in;
+    }
+    42% {
+        transform: translateY(-17vh);
+        animation-timing-function: ease-out;
+    }
+    47% {
+        transform: translateY(-22vh);
+        animation-timing-function: ease-in;
+    }
+    53%{
+        transform: translateY(-17vh);
+        animation-timing-function: ease-out;
+    }
+    59% {
+        transform: translateY(-19vh);
+        animation-timing-function: ease-out;
+    }
+    64% {
+        transform: translateY(-17vh);
+        animation-timing-function: ease-out;
+    }
+    69% {
+        transform: translateY(-18vh);
+        animation-timing-function: ease-out;
+    }
+    73%, 100% {
+        transform: translateY(-17vh);
+        animation-timing-function: ease-out;
+    }
+
+}
+.ball2Vertical.loseGravityY {
+    animation: loseGravityY 1s cubic-bezier(0, 0, .4, 1) forwards;
+}
+@keyframes loseGravityY {
+    0% {
+        transform: translateY(17vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.ball2Horizontal.loseGravityX {
+        transform: translateX(37vw);
+}
+/*
+.ball2Horizontal.moveLeft {
+    animation: moveLeft .5s ease-in forwards;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translateX(37vw);
+    }
+    100% {
+        transform: translateX(17vw);
+
+    }
+}
+.ball2Horizontal.moveRight {
+    animation: moveRight .5s ease-in forwards;
+}
+@keyframes moveRight {
+    0% {
+        transform: translateX(37vw);
+    }
+    100% {
+        transform: translateX(57vw);
+
+    }
+}
+.ball2Vertical.moveUp {
+    animation: moveUp .5 ease-out forwards;
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10vh);
+    }
+}
+.ball2Vertical.moveDown {
+    animation: moveDown .5 ease-out forwards;
+}
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20vh);
+    }
+}
+
+
+
+.sneak {
+    animation: sneak 10s forwards;
+}
+@keyframes sneak {
+    0% {
+        transform: translate(0, 0) scale(1);
+        border: none;
+    }
+    10%, 12%, 14%, 16% {
+        transform: translate(15vw, 0) scale(1) rotate(60deg);
+        animation-timing-function: ease-in;
+        border: none;
+    }
+    11%, 13%, 15% {
+        transform: translate(15vw, -1vh) scale(.8, 1.2) rotate(60deg);
+        animation-timing-function: ease-out;
+        border: none;
+    }
+    19% {
+        transform: translate(17vw, -5vh) scale(1) rotate(60deg);
+        animation-timing-function: ease-in;
+        border: none;
+    }
+    21% {
+        transform: translate(19vw, 1vh) scale(1.1) rotate(60deg);
+        animation-timing-function: ease-in;
+        border: none;
+    }
+    23% {
+        transform: translate(21vw, -3vh) scale(1.1) rotate(60deg);
+        animation-timing-function: ease-in;
+        border: none;
+    }
+    25% {
+        transform: translate(23vw, 4vh) scale(1.2) rotate(60deg);
+        animation-timing-function: ease-out;
+        border: none;
+    }
+    27% {
+        transform: translate(26vw, -1vh) scale(1.2) rotate(60deg);
+        animation-timing-function: ease-in;
+        border: none;
+    }
+    28% {
+        transform: translate(29vw, 9vh) scale(1.5) rotate(60deg);
+        animation-timing-function: ease-in;
+        border: none;
+    }
+    45% {
+        transform: translate(33vw, 9vh) scale(1.5) rotate(90deg);
+        animation-timing-function: ease-out;
+        border: none;
+    }
+    51% {
+        transform: translate(45vw, 10vh) scale(2.4, .5) rotate(90deg);
+        animation-timing-function: ease-out;
+        border: none;
+    }
+    52% {
+        transform: translate(50vw, 9vh) scale(1.5) rotate(90deg);
+        animation-timing-function: ease-in;
+        border: none;
+    }
+    53% {
+        transform: translate(70vw, 5vh) scale(1.2) rotate(1080deg);
+        border: none;
+        animation-timing-function: ease-in;
+    }
+    63% {
+        transform: translate(120vw, -10vh) scale(.9) rotate(1800deg);
+        animation-timing-function: ease-in;
+    }
+    77% {
+        transform: translate(70vw, -15vh) scale(.5) rotate(-240deg);
+        animation-timing-function: ease-in;
+        border: 3px solid rgba(255,255,0, .5);
+    }
+    80% {
+        transform: translate(68vw, -18vh) scale(.5) rotate(-480deg);
+        animation-timing-function: ease-in;
+        border: 3px solid rgba(255,255,0, .5);
+    }
+    83% {
+        transform: translate(66vw, -15vh) scale(.5) rotate(-720deg);
+        animation-timing-function: ease-in;
+        border: 3px solid rgba(255,255,0, .5);
+    }
+    86% {
+        transform: translate(64vw, -18vh) scale(.5) rotate(-960deg);
+        animation-timing-function: ease-in;
+        border: 3px solid rgba(255,255,0, .5);
+    }
+    89% {
+        transform: translate(62vw, -15vh) scale(.5) rotate(-1200deg);
+        animation-timing-function: ease-in;
+        border: 3px solid rgba(255,255,0, .5);
+    }
+    93% {
+        transform: translate(36vw, -25vh) scale(.3) rotate(-2400deg);
+        animation-timing-function: ease-in;
+        border: 7px solid rgba(255,255,0, .5);
+    }
+    100% {
+        transform: translate(0, -30vh) scale(0) rotate(-4800deg);
+        animation-timing-function: ease-in;
+        border: 11px solid rgba(255,255,0, .5);
+    }
+}
+div.bgsneak {
+    animation: darkenBackground .5s 6s forwards;
+}
+
+*/
