@@ -4,9 +4,9 @@ let redesignLess = document.querySelector('#redesignLess');
 let redesignDesc = document.querySelector('.redesignDesc');
 let opArt = document.querySelector('.opArt');
 let toggleToRedesign = document.querySelector('.onOpArt');
-let toggleToRedesign2 = document.querySelector('.onOpArt2');
 let toggleToOpArt = document.querySelector('.onRedesign');
 let toggleToOpArt2 = document.querySelector('.onRedesign2');
+let toAnimation = document.querySelector('#toAnimation');
 let toFrontpage = document.querySelector('p.frontpage');
 let toContent = document.querySelector('p.content');
 let toNavigation = document.querySelector('p.navigation');
@@ -40,10 +40,10 @@ function toPhone(){
 // switch screen sizes -END
 // toggle between 2 main parts
 toggleToRedesign.addEventListener('click', toRedesign);
-toggleToRedesign2.addEventListener('click', toRedesign);
 function toRedesign(){
     redesign.classList.add('show');
     opArt.classList.add('hide');
+    toAnimation.classList.remove('hide')
 }
 toggleToOpArt.addEventListener('click', toOpArt);
 toggleToOpArt2.addEventListener('click', toOpArt);

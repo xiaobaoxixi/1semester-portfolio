@@ -80,7 +80,7 @@ body#webDesign span {
 }
 .sideToggle {
     color: white;
-    width: 23vw;
+    width: 16vw;
     height: 40vw;
     max-height: 100px;
     max-width: 200px;
@@ -88,6 +88,7 @@ body#webDesign span {
     cursor: pointer;
     text-align: center;
     padding: 1em 0;
+    z-index: 10;
 }
 .opArt .sideToggle {
     right: 0;
@@ -106,6 +107,9 @@ body#webDesign span {
 .sideToggle.next {
     left: 77vw;
     background-color: rgba(173,173,173, .7);
+    position: fixed;
+    bottom: 0;
+    left: 84vw;
 }
 .responsiveSizes {
     width: 100vw;
@@ -1034,7 +1038,7 @@ iframe {  /* which one is this? */
 /* 768 */
 @media screen and (min-width: 48em){
     /* web */
-    .opArt .sideToggle {
+    .sideToggle {
         font-size: 1.3em;
     }
     .responsiveSizes {
