@@ -79,7 +79,7 @@ body#webDesign span {
     left: 0;
 }
 .sideToggle {
-    background: rgba(255,0,0, .5);
+    background-color: rgba(173,173,173, .7);
     color: white;
     width: 23vw;
     height: 40vw;
@@ -87,14 +87,13 @@ body#webDesign span {
     max-width: 200px;
     position: absolute;
     cursor: pointer;
-    text-align: right;
+    text-align: center;
     padding: 1em 0;
 }
 .opArt .sideToggle {
     right: 0;
 }
 .opArt .sideToggle2 {
-    background-color: rgba(173,173,173, .7);
     font-size: 1.1em;
 }
 .redesign .sideToggle {
@@ -103,6 +102,11 @@ body#webDesign span {
 .redesign .sideToggle2 {
     bottom: -2em;
 }
+.responsiveSizes {
+    width: 100vw;
+    position: relative;
+}
+
 p.frontpage {
     font-weight: bold;
 }
@@ -308,14 +312,18 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
 }
 .finalFrontpage img:first-of-type {
     width: 34%;
-    border-right: 1px solid #333;
+    border-right: 1px solid #aaa;
 }
 .finalFrontpage img:nth-of-type(2) {
     width: 64%;
 }
 .finalFrontpage img:nth-of-type(3) {
     width: 100%;
-    border-top: 1px solid #333;
+    border-top: 1px solid #aaa;
+}
+#arrowInFinal {
+    width: 30px;
+    transform: rotate(90deg)
 }
 .navigationTest img {
     width: 100%;
@@ -914,6 +922,29 @@ iframe {  /* which one is this? */
         height: 67.5vw;
         margin-left: 16vw;
     }
+    .frontpageDesign {
+        min-height: inherit;
+    }
+    .frontpageDesign:nth-child(odd) img:not(.arrowDown) {
+        width: 40%;
+        margin-left: 60%;
+    }
+    .frontpageDesign:nth-child(even) img:not(.arrowDown) {
+        width: 40%;
+        margin-right: 60%;
+    }
+    .frontpageDesign:nth-child(odd) .frontpageDesignDesc {
+        top: 0;
+    }
+    .clickableTest img {
+        width: 40%;
+        display: inline;
+        margin-left: 5%;
+    }
+    .clickableTest img:last-of-type {
+        border: 1px solid #333;
+    }
+
     /* animation */
     .mrBall > div {
         width: 81vw;
@@ -966,6 +997,132 @@ iframe {  /* which one is this? */
 }
 /* 768 */
 @media screen and (min-width: 48em){
+    /* web */
+    .opArt .sideToggle {
+        font-size: 1.3em;
+    }
+    .responsiveSizes {
+        width: 80vw;
+        padding-left: 10vw;
+    }
+    .responsiveSizes h1 {
+        margin-left: 0;
+        font-size: 3em;
+    }
+    .wrapper {
+        width: 600px;
+        height: 562.5px;
+        margin-top: 3em;
+        margin-left: 10vw;
+    }
+    p.responsive {
+        font-size: 2vw;
+        position: absolute;
+        left: 5vw;
+        font-size: 1em;
+    }
+    p.responsive:nth-of-type(1) {
+        top: 10%;
+    }
+    p.responsive:nth-of-type(2) {
+        top: 14%;
+    }
+    p.responsive:nth-of-type(3) {
+        top: 18%;
+    }
+    .wrapper ~a, .wrapper ~a ~img {
+        margin-left: 0;
+    }
+    .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .frontpageDesignDesc {
+        background-color: transparent;
+    }
+    .frontpageDesign:nth-child(odd) img:not(.arrowDown), .frontpageDesign:nth-child(even) img:not(.arrowDown), .frontpageDesignDesc {
+        width: 200px;
+    }
+    .frontpageDesignDesc:first-of-type img.arrowDown {
+        transform: rotate(270deg);
+    }
+    .frontpageDesign:nth-of-type(1) img:not(.arrowDown) {
+        margin-left: 33%;
+    }
+    #desc22 {
+        top: -100%;
+        left: 66%;
+    }
+    #desc22 img {
+        transform: rotate(0deg);
+    }
+    #frontpage22 {
+        margin-left: 66%;
+    }
+    #desc33 {
+        top: 0%;
+        left: 33%;
+    }
+    #desc33 img {
+        transform: rotate(90deg);
+    }
+    #frontpage33 {
+        margin-left: 0;
+        margin-top: -310px;
+    }
+    #desc44 {
+        right: 80%;
+    }
+    #frontpage44 {
+        margin-left: 33%;
+    }
+    #desc55 {
+        top: -100%;
+        left: 66%;
+    }
+    #desc55 img{
+        transform: rotate(0deg);
+    }
+    #frontpage55 {
+        margin-left: 66%;
+    }
+    .finalFrontpage {
+        width: 66%;
+        margin-top: -200px;
+        border-right: 1px solid #aaa;
+    }
+    .clickableTest img {
+        width: 30%;
+        margin-left: 0;
+    }
+    .clickableTest img:last-of-type {
+        margin-left: 37%;
+        border: none;
+    }
+    .clickableTestDesc {
+        position: absolute;
+        width: 31%;
+        margin-left: 33%;
+        padding-top: 10%;
+        font-size: .9em;
+    }
+
+    .otherTest {
+        padding: 2em;
+        padding-left: 0;
+    }
+    body#webDesign .opArtTests h1, body#webDesign .opArtTests h3 {
+        text-align: left;
+        margin-left: 0;
+    }
+    .navigationTest img:first-of-type {
+        display: inherit;
+    }
+    .navigationTest img:not(first-of-type) {
+        display: none;
+    }
+    /* animation */
     .worksheetDesc {
         height: 11em;
     }
@@ -1038,11 +1195,46 @@ iframe {  /* which one is this? */
 }
 /* 1000 */
 @media screen and (min-width: 1000px){
+    .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
+        width: 800px;
+        margin: 0 auto;
+    }
+    .responsiveSizes {
+        padding-left: 0;
+    }
+    .wrapper {
+        margin-right: 10vw;
+    }
+    .frontpageTest {
+        width: 800px;
+    }
     .gameImgs {
         margin-left: calc(50vw - 500px);
+    }
 }
-/* 1440 */
-@media screen and (min-width: 90em){
+/* 1280 */
+@media screen and (min-width: 80em){
+    /* web */
+    body#webDesign div.half {
+        width: 1280px;
+        margin-left: calc(50vw - 640px);
+    }
+    .wrapper {
+        margin-right: 50px;
+    }
+    p.responsive {
+        font-size: 1.5em;
+        position: absolute;
+        padding-left: 0;
+    }
+    .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+
+
+
     /* animation */
     .mrBall > div {
         width: 999px;

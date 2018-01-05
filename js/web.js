@@ -59,9 +59,9 @@ function displayFrontPage(){
     device.classList.add('frontpage');
     device.classList.remove('content');
     device.classList.remove('navigation');
-    setTimeout(toPhone, 1000);
+    setTimeout(toPhone, 500);
     setTimeout(toPadV, 2500);
-    setTimeout(toComputer, 4000);
+    setTimeout(toComputer, 4500);
 }
 toContent.addEventListener('click', displayContent);
 function displayContent(){
@@ -72,10 +72,10 @@ function displayContent(){
     device.classList.remove('frontpage');
     device.classList.remove('navigation');
     device.classList.add('content');
-    setTimeout(toPhone, 1000);
+    setTimeout(toPhone, 500);
     setTimeout(toPadV, 2500);
-    setTimeout(toPadH, 4000);
-    setTimeout(toComputer, 5500);
+    setTimeout(toPadH, 4500);
+    setTimeout(toComputer, 6500);
 }
 toNavigation.addEventListener('click', displayNavigation);
 function displayNavigation(){
@@ -85,9 +85,9 @@ function displayNavigation(){
     device.classList.remove('frontpage');
     device.classList.remove('content');
     device.classList.add('navigation');
-    setTimeout(toPhone, 1000);
+    setTimeout(toPhone, 500);
     setTimeout(toPadV, 2500);
-    setTimeout(toPadH, 4000);
-    setTimeout(toComputer, 5500);
+    setTimeout(toPadH, 4500);
+    setTimeout(toComputer, 6500);
 }
 
