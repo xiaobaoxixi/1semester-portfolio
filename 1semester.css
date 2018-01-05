@@ -1251,11 +1251,6 @@ iframe {  /* which one is this? */
     .gameImgs {
         margin-left: calc(50vw - 500px);
     }
-    .redesign img:not(.icon) {
-        width:70%;
-        margin-left: 15%;
-    }
-
 }
 /* 1280 */
 @media screen and (min-width: 80em){
