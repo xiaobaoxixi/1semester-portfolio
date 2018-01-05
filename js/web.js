@@ -50,6 +50,7 @@ toggleToOpArt2.addEventListener('click', toOpArt);
 function toOpArt(){
     redesign.classList.remove('show');
     opArt.classList.remove('hide');
+    toAnimation.classList.add('hide')
 }
 // default start with frontpage
 displayFrontPage();
