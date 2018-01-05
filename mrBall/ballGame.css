@@ -1,10 +1,11 @@
 .scene {
     position: relative;
-    height: 60vh;
+    height: 66vh;
     width: 86vw;
     margin: 2em auto 1em 7vw;
     background: white;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 .volumeControl {
     width: 5vw;

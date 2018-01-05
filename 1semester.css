@@ -412,9 +412,26 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
     margin-top: 2em;
 }
 /* animation */
+.mrBall {
+    overflow: hidden;
+}
+.mrBall h1 {
+    margin-left: 1.7em;
+}
+.mrBall p {
+    margin: 0 4em;
+    font-size: .9em;
+}
+.mrBall ul {
+    margin-left: 5em;
+}
+.mrBall .mrBallSimple {
+    width: 100%;
+    margin: 0;
+}
 .mrBallSimple iframe {
     width: 100%;
-    height: 66vw;
+    height: 130%;
 }
 .mrBall > div {
     width: 90vw;
@@ -423,7 +440,7 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
     position: relative;
 }
 div.toggleStage, div.mrBallOri {
-    height: 3em;
+    height: 5em;
     padding-top: 1em;
 }
 .toggleStage span:not(:first-of-type) {
@@ -444,44 +461,15 @@ div.toggleStage, div.mrBallOri {
     border: 1px solid red;
     position: absolute;
 }
-.mrBallLow {
-    width: 70%;
-    height: 30%;
-    bottom: 30%;
+.mrBallOri img {
+    width: 80px;
+    height: auto;
+    left: 0;
 }
-.mrBallTall {
-    width: 30%;
-    height: 70%;
+#toUX, #toVideo {
+    left: auto;
     right: 0;
-    top: 0;
 }
-.mrBallWide {
-    width: 100%;
-    height: 30%;
-    bottom: 0;
-}
-.mrBallFull {
-    width: 100%;
-    height: 70%;
-    bottom: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .story {
     height: 180vw;
     min-height: 912px;
@@ -505,8 +493,8 @@ div.toggleStage, div.mrBallOri {
     margin-left: 5em;
 }
 .storyIdeaStyleTile img.originalDown {
-    height: 2em;
-    bottom: -2em;
+    height: 3em;
+    bottom: -3em;
     left: 5em;
 }
 .storyboardWorksheet {
@@ -1012,7 +1000,7 @@ iframe {  /* which one is this? */
         height: 54vw;
     }
     div.toggleStage, div.mrBallOri {
-        height: 3em;
+        height: 6em;
     }
     .worksheetDesc {
         height: 13em;
@@ -1188,13 +1176,22 @@ iframe {  /* which one is this? */
         display: inline;
     }
     /* animation */
+    .mrBall h1 {
+        margin-left: 2.7em;
+    }
+    .mrBall p {
+        margin-left: 6em;
+    }
+    .mrBall ul {
+        margin-left: 7em;
+    }
     .worksheetDesc {
         height: 11em;
     }
     .worksheet {
         top: 9em;
         left: 1vw;
-        height: 45vw;
+        height: 40vw;
     }
     .story {
         height: 147vw;
@@ -1212,16 +1209,26 @@ iframe {  /* which one is this? */
 /* 896 */
 @media screen and (min-width: 56em){
     /* animation */
+    .mrBall h1 {
+        margin-left: 3.5em;
+    }
+    .mrBall p {
+        margin-left: 8em;
+    }
+    .mrBall ul {
+        margin-left: 9em;
+    }
     .mrBall > div {
         width: 66vw;
         height: 44vw;
     }
     div.toggleStage, div.mrBallOri {
-        height: 3em;
+        height: 6em;
+        width: 81vw;
     }
     .story {
         width: 81vw;
-        height: 135vw;
+        height: 130vw;
         max-height: 1400px;;
         margin: 2em auto;
     }
@@ -1229,17 +1236,24 @@ iframe {  /* which one is this? */
         height: 61vw;
     }
     .storyboardWorksheet {
-        height: 45vw;
+        height: 43vw;
+        margin-bottom: 0;
     }
+    .storyIdeaStyleTile img.originalDown {
+        height: 4em;
+        bottom: -4em;
+        left: 5em;
+    }
+
     .animationProjects {
         width: 81vw;
     }
     .worksheet {
-        top: 11em;
+        top: 9em;
     }
     .worksheetOri {
         width: 70%;
-        right: 10em;
+        right: 5em;
     }
     iframe.projectScene {
         max-height: 700px;
@@ -1276,6 +1290,22 @@ iframe {  /* which one is this? */
     .gameImgs {
         margin-left: calc(50vw - 500px);
     }
+    .strangelove h2 {
+        margin-left: 6em;
+    }
+    .strangelove p {
+        margin: 0 9em 2em 9em;
+    }
+    .strangeloveOri p {
+        padding-right: 0;
+    }
+    .strangeloveInfo {
+        border-top: 2px dotted #333;
+    }
+    .strangeloveInfo p {
+        margin: 2em;
+    }
+
 }
 /* 1280 */
 @media screen and (min-width: 80em){
@@ -1296,17 +1326,27 @@ iframe {  /* which one is this? */
         width: 1000px;
         margin: 0 auto;
     }
-
-
-
-
     /* animation */
+    .mrBall h1 {
+        margin-left: 5em;
+    }
+    .mrBall p {
+        margin-left: 11em;
+    }
+    .mrBall ul {
+        margin-left: 10em;
+    }
     .mrBall > div {
         width: 999px;
-        height: 666px;
+        height: 31vw;
+    }
+    .mrBallSimple iframe {
+        width: 80%;
+        margin-left: 5%;
+        height: 104%;
     }
     div.toggleStage, div.mrBallOri {
-        height: 3em;
+        height: 4em;
     }
     .story {
         width: 999px;
@@ -1316,6 +1356,11 @@ iframe {  /* which one is this? */
     }
     .storyboardWorksheet {
         height: 55vw;
+    }
+    .storyIdeaStyleTile img.originalDown {
+        height: 5em;
+        bottom: -5em;
+        left: 5em;
     }
 }
 /* super small*/
