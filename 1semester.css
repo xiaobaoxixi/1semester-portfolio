@@ -41,6 +41,12 @@ main {
     overflow-x: hidden;
 }
 /* web */
+body#webDesign main {
+    overflow-x: hidden;
+    height: 100vh;
+    min-width: 100vw;
+    overflow-y: scroll;
+}
 body#webDesign h1 {
     display: inline;
 }
@@ -57,32 +63,51 @@ body#webDesign span {
 .half p {
     margin-left: 2em;
 }
+.opArt {
+    left: 0;
+}
 .redesign {
-    background: green;
     left: 100vw;
 }
 .redesign.show {
     left: 0;
+    background: white;
+    z-index: 20;
+    height: 2000px;
 }
 .redesign.show {
     left: 0;
 }
 .sideToggle {
-    border: 1px solid black;
-    width: 10vw;
-    height: 100%;
+    background: rgba(255,0,0, .5);
+    color: white;
+    width: 23vw;
+    height: 40vw;
+    max-height: 100px;
+    max-width: 200px;
     position: absolute;
+    cursor: pointer;
+    text-align: right;
+    padding: 1em 0;
 }
 .opArt .sideToggle {
     right: 0;
 }
+.opArt .sideToggle2 {
+    background-color: rgba(173,173,173, .7);
+    font-size: 1.1em;
+}
 .redesign .sideToggle {
     left: 0;
+}
+.redesign .sideToggle2 {
+    bottom: -2em;
 }
 p.frontpage {
     font-weight: bold;
 }
 p.responsive {
+    width: 70%;
     cursor: pointer;
     color: #333;
     font-size: .8em;
@@ -94,11 +119,19 @@ p.responsive {
 .wrapper {
     width: 80vw;
     height: 75vw;
-    margin-left: 10vw;
+    margin-left: 12vw;
     position: relative;
 }
 .wrapper div, img.homeOrCamera {
     position: absolute;
+}
+.wrapper ~a {
+    margin-left: 2em;
+}
+.wrapper ~a ~img {
+    width: 125px;
+    margin-left: 2em;
+    position: relative;
 }
 .device {
     width: 28%;
@@ -126,7 +159,6 @@ p.responsive {
     bottom: .3em;
     left: 42%;
 }
-
 .homeOrCameraFull {
     display: none;
 }
@@ -175,14 +207,15 @@ p.responsive {
     display: inherit;
     position: absolute;
     width: 2%;
-    left: 47%;
+    left: 49%;
     top: .5em;
 }
 .computerBase {
     width: 104%;
     position: absolute;
     left: -7%;
-    bottom: .8em;
+    bottom: 1.2em;
+    display: none;
 }
 .navigation .screen {
     background-image: url('img/web/navigation.jpg');
@@ -208,7 +241,124 @@ p.responsive {
 .content.computer .screen {
     background-image: url('img/web/content-computer.jpg');
 }
+.opArtTests {
+    margin-top: 2em;
+}
+body#webDesign .opArtTests  h1, .opArtTests  h3 {
+    display: block;
+    text-align: right;
+    padding-right: 1em;
+}
+.opArtTests  h3 {
+    margin-right: 1em;
+}
+.frontpageDesign {
+    width: 100%;
+    min-height: 430px;
+    position: relative;
+}
+.frontpageDesign:nth-child(odd) img:not(.arrowDown) {
+    width: 65%;
+    margin-left: 35%;
+}
+.frontpageDesign:nth-child(even) img:not(.arrowDown){
+    width: 65%;
+    min-height: 300px;
+    margin-right: 35%;
+}
+.frontpageDesignDesc {
+    width: 60%;
+    position: absolute;
+    padding: 4em 2em 4em 1em;
+    background-color: rgba(255,255,255,.7);
+    bottom: -1em;
+    z-index: 1;
+}
+.frontpageDesign:nth-child(even) .frontpageDesignDesc {
+    padding: 4em 1em 4em 1em;
+    text-align: right;
+}
+.frontpageDesignDesc p {
+    font-size: .9em;
+    margin-bottom: .7em;
+}
+.frontpageDesignDesc span {
+    font-weight: bold;
+}
+.frontpageDesign:nth-child(odd) .frontpageDesignDesc {
+    left: 0;
+}
+.frontpageDesign:nth-child(even) .frontpageDesignDesc {
+    right: 0;
+}
+.frontpageDesign img.arrowDown {
+    width: 20px;
+    height: 17px;
+    margin: 1em 73%;
+}
+.frontpageDesign:nth-child(odd) img.arrowDown {
+    margin: 1em 27%;
+}
+.finalFrontpage img {
+    display: inline;
+}
+.finalFrontpage p {
+    margin-top: 1em;
+    font-weight: bold;
+}
+.finalFrontpage img:first-of-type {
+    width: 34%;
+    border-right: 1px solid #333;
+}
+.finalFrontpage img:nth-of-type(2) {
+    width: 64%;
+}
+.finalFrontpage img:nth-of-type(3) {
+    width: 100%;
+    border-top: 1px solid #333;
+}
+.navigationTest img {
+    width: 100%;
+}
+.navigationTest img:first-of-type {
+    display: none;
+}
+.navigationTest ul {
+    margin: 0 1.8em;
+    list-style:disc;
+}
+.navigationTest li {
+    font-size: .9em;
+}
+.clickableTest img {
+    width: 80%;
+    margin-left: 10%;
+}
+.opArtOri {
+    padding-top: 2em;
+}
+.opArtOri img {
+    height: 4.6em;
+}
+.opArtOri a {
+    margin-left: 3em;
+}
 
+
+.redesign h1 {
+    position: absolute;
+    right: 0;
+}
+.redesign img.badDesign {
+    width: 35%;
+}
+.redesign img.newDesign {
+    width: 61%;
+}
+.compare {
+    position: absolute;
+    top: 10em;
+}
 
 
 
@@ -424,6 +574,14 @@ img.drStrangelove, .strangeloveOri {
     position: absolute;
     right: 0;
     bottom: 5em;
+}
+.strangeloveOri p {
+    margin: 0 -1em 1em 0;
+    padding-right: 1em;
+    line-height: 2.6em;
+}
+.strangeloveOri p:first-of-type {
+    margin-top: -2.6em;
 }
 .strangeloveInfo {
     height: 100%;
@@ -750,6 +908,12 @@ iframe {  /* which one is this? */
 }
 /* 576 */
 @media screen and (min-width: 36em){
+    /* web */
+    .wrapper {
+        width: 72vw;
+        height: 67.5vw;
+        margin-left: 16vw;
+    }
     /* animation */
     .mrBall > div {
         width: 81vw;
@@ -896,5 +1060,8 @@ iframe {  /* which one is this? */
     .storyboardWorksheet {
         height: 55vw;
     }
+}
+/* super small*/
+@media screen and (max-width: 480px){
 }
 /* grid */

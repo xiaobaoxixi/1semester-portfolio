@@ -5,12 +5,13 @@ font
 
 WEB:
 transition animation when change screen sizes
+computer base clip top half
 
 ANIMATION:
 hair move is: follow through, overlapping action, drag
 iframe use background image?
-hover on games img show hint of which game
-
+hover on games img show hint of which game and intro of games
+why difficult, why easy
 
 UX:
 !!!!!!! CSS !!!!!!!
@@ -25,7 +26,7 @@ click to turn storyboard
 input storyboard text
 draw frist image for both videos, click on image transit to video
 add original icon to iframe
-
+when iframe opens, pause original videos
 
 
 material:
