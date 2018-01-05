@@ -79,7 +79,6 @@ body#webDesign span {
     left: 0;
 }
 .sideToggle {
-    background-color: rgba(173,173,173, .7);
     color: white;
     width: 23vw;
     height: 40vw;
@@ -92,6 +91,7 @@ body#webDesign span {
 }
 .opArt .sideToggle {
     right: 0;
+    z-index: 100;
 }
 .opArt .sideToggle2 {
     font-size: 1.1em;
@@ -99,14 +99,18 @@ body#webDesign span {
 .redesign .sideToggle {
     left: 0;
 }
-.redesign .sideToggle2 {
-    bottom: -2em;
+.sideToggle.previous {
+    left: 0;
+    color: rgba(173,173,173, .7);
+}
+.sideToggle.next {
+    left: 77vw;
+    background-color: rgba(173,173,173, .7);
 }
 .responsiveSizes {
     width: 100vw;
     position: relative;
 }
-
 p.frontpage {
     font-weight: bold;
 }
@@ -351,25 +355,57 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
 .opArtOri a {
     margin-left: 3em;
 }
-
-
-.redesign h1 {
-    position: absolute;
-    right: 0;
-}
-.redesign img.badDesign {
-    width: 35%;
-}
-.redesign img.newDesign {
-    width: 61%;
+/* redesign */
+.redesign, .compare {
+    position: relative;
 }
 .compare {
-    position: absolute;
-    top: 10em;
+    top: 130px;
 }
-
-
-
+.redesignInfo {
+    position: relative;
+    right: 0;
+    top: 100px;
+}
+.redesignDesc {
+    position: absolute;
+    background: white;
+    z-index: 2;
+    padding: 1em;
+}
+.redesignDesc p {
+    margin-bottom: 1em;
+}
+#redesignMore, #redesignLess {
+    display: inherit;
+}
+#redesignMore.hide, #redesignLess.hide {
+    display: none;
+}
+.redesign img:not(.icon) {
+    width: 90%;
+    margin-left: 5%;
+}
+.compare p {
+    text-align: center;
+    color: #555;
+    font-size: 1.5em;
+}
+.redesignM {
+    padding-top: 2em;
+}
+#redesignOri {
+    width: 50px;
+    margin-left: 0;
+    position: relative;
+    top: 2em;
+}
+.redesign a:not(.noMove) {
+    margin: -2em 4em;
+}
+.redesign hr {
+    margin-top: 2em;
+}
 /* animation */
 .mrBall > div {
     width: 90vw;
@@ -1107,7 +1143,6 @@ iframe {  /* which one is this? */
         padding-top: 10%;
         font-size: .9em;
     }
-
     .otherTest {
         padding: 2em;
         padding-left: 0;
@@ -1121,6 +1156,11 @@ iframe {  /* which one is this? */
     }
     .navigationTest img:not(first-of-type) {
         display: none;
+    }
+    .redesign img:not(.icon) {
+        width: 40%;
+        margin-left: 7%;
+        display: inline;
     }
     /* animation */
     .worksheetDesc {
@@ -1211,6 +1251,11 @@ iframe {  /* which one is this? */
     .gameImgs {
         margin-left: calc(50vw - 500px);
     }
+    .redesign img:not(.icon) {
+        width:70%;
+        margin-left: 15%;
+    }
+
 }
 /* 1280 */
 @media screen and (min-width: 80em){

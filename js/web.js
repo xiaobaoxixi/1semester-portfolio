@@ -1,4 +1,7 @@
 let redesign = document.querySelector('.redesign');
+let redesignMore = document.querySelector('#redesignMore');
+let redesignLess = document.querySelector('#redesignLess');
+let redesignDesc = document.querySelector('.redesignDesc');
 let opArt = document.querySelector('.opArt');
 let toggleToRedesign = document.querySelector('.onOpArt');
 let toggleToRedesign2 = document.querySelector('.onOpArt2');
@@ -90,4 +93,11 @@ function displayNavigation(){
     setTimeout(toPadH, 4500);
     setTimeout(toComputer, 6500);
 }
-
+// toggle redesign desc
+redesignMore.addEventListener('click', toggleRedesignDesc);
+redesignLess.addEventListener('click', toggleRedesignDesc);
+function toggleRedesignDesc(){
+    redesignDesc.classList.toggle('hide');
+    redesignMore.classList.toggle('hide');
+    redesignLess.classList.toggle('hide');
+}
