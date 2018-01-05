@@ -52,8 +52,11 @@ function toOpArt(){
     opArt.classList.remove('hide');
     toAnimation.classList.add('hide')
 }
-// default start with frontpage
+// auto play start with frontpage
 displayFrontPage();
+setTimeout(displayContent, 6000);
+setTimeout(displayNavigation, 15000);
+
 // click on frontpage
 toFrontpage.addEventListener('click', displayFrontPage);
 function displayFrontPage(){
@@ -93,6 +96,7 @@ function displayNavigation(){
     setTimeout(toPadV, 2500);
     setTimeout(toPadH, 4500);
     setTimeout(toComputer, 6500);
+    setTimeout(displayFrontPage, 9000);
 }
 // toggle redesign desc
 redesignMore.addEventListener('click', toggleRedesignDesc);

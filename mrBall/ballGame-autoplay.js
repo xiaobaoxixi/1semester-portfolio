@@ -179,6 +179,7 @@ function glow(){
 }
 function jump(){
     ball.className = "jump";
+    shadow.style.display = "inherit";
     shadow.className = ("shadow shadowjump");
     setTimeout(ballBounceSound, 470);
     ballAudio.playbackRate = 1.37;

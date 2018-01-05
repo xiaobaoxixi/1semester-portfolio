@@ -425,6 +425,9 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
 .mrBall ul {
     margin-left: 5em;
 }
+.mrBall li {
+    font-size: .9em;
+}
 .mrBall .mrBallSimple {
     width: 100%;
     margin: 0;
@@ -531,7 +534,7 @@ div.toggleStage, div.mrBallOri {
 }
 .worksheet {
     width: 90%;
-    height: 52vw;
+    height: 60vw;
     max-width: 960px;
     max-height: calc(362px + 5em);
     position: absolute;
@@ -1191,7 +1194,7 @@ iframe {  /* which one is this? */
     .worksheet {
         top: 9em;
         left: 1vw;
-        height: 40vw;
+        height: 42vw;
     }
     .story {
         height: 147vw;
@@ -1362,8 +1365,5 @@ iframe {  /* which one is this? */
         bottom: -5em;
         left: 5em;
     }
-}
-/* super small*/
-@media screen and (max-width: 480px){
 }
 /* grid */

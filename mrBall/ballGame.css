@@ -108,7 +108,7 @@ img#ball2, img#ball3 {
 .shadowjump, .shadowoneJump {
     display: inherit;
     position: absolute;
-    top: 42.5vh;
+    top: 48.3vh;
     left: 24.5vw;
     width: 4vw;
     height: 1vh;
