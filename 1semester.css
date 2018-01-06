@@ -877,7 +877,7 @@ img.slideDown {
     display: block;
     height: 30px;
     width: 40px;
-    margin: 2em auto;
+    margin: 5em auto 1em auto;
 }
 div.descSH {
     text-align: center;
@@ -886,6 +886,7 @@ div.descSH {
 }
 div.descSH p {
     margin-top: 1em;
+    font-weight: bold;
 }
 h2 {
     text-align: center;
@@ -942,20 +943,23 @@ img.pdf {
     margin-left: 0;
 }
 img.logo {
-    width: 70%;
+    width: 40%;
     max-width: 480px;
     margin-left: 5%;
 }
 .aboutLogoDesignWrapper {
-    width: 90%;
-    height: 100%;
+    width: 60%;
+    height: 110vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: absolute;
-    top: 0;
-    right: -90%;
+    top: 5em;
+    right: 0;
     padding: 1.5em;
+    padding-top: 3em;
     font-size: 14px;
 }
-.aboutLogoDesignWrapper.slideOut {
+/*.aboutLogoDesignWrapper.slideOut {
     animation: wdilSlideOut .5 ease-out forwards;
     right: -45%;
 }
@@ -963,23 +967,16 @@ img.logo {
     to{
         right: 250px;
     }
-}
+}*/
 .wdil {
-    width: 9%;
+    width: 100%;
     position: absolute;
-    left: -7%;
-    cursor: pointer;
-}
-.slideFat {
-    width: 7%;
-    position: absolute;
-    left: -7%;
-    top: 31%;
+    top: 1em;
     cursor: pointer;
 }
 .aboutLogoDesign {
     background-color: white;
-    padding: .5em 1em 2em 1em;
+    padding: 3vw 1em 2em 2em;
 }
 .aboutLogoDesign p {
     margin-top: 1em;
@@ -987,17 +984,27 @@ img.logo {
 .aboutLogoDesign a {
     margin-left: 0;
 }
+.iconDesignDoc {
+    width: 85px;
+}
 .logoFinal {
     width: 32%;
     margin-left: 1%;
+    margin-bottom: 2em;
     float: left;
+}
+.nightMode {
+    width: 100%;
+    border-bottom: 1px solid #333;
 }
 .pitch {
     text-align: center;
 }
 .pitch p, .dilemma p {
     padding: 0 2em;
-    margin-bottom: 1em;
+    margin: 1em;
+    text-align: center;
+    font-size: .9em;
 }
 .pitch a {
     margin-left: 0em;
@@ -1005,8 +1012,7 @@ img.logo {
 img.pitchOriginalIcon {
     position: inherit;
     width: 200px;
-    margin-left: calc(50vw - 100px);
-    margin-bottom: 10px;
+    margin: 30px auto 0 auto;
 }
 iframe {  /* which one is this? */
     width: 100%;
@@ -1083,29 +1089,17 @@ iframe {  /* which one is this? */
     /* ux */
     .introSH {
         height: 650px;
+        margin: 0 auto;
+    }
+    .report, .pitch, .descSH {
+        width: 596px;
+        margin: 0 auto;
     }
     div.line3 {
         bottom: 330px;
     }
     div.line2 {
         bottom: 350px;
-    }
-    img.logo {
-        width: 60%;
-        max-width: 480px;
-    }
-    .wdil {
-        width: 13%;
-        left: -13%;
-    }
-    .slideFat {
-        width: 7%;
-        left: -7%;
-        top: 43%;
-    }
-    .aboutLogoDesign {
-        padding: .5em 5em 2em 2em;
-        height: 61%;
     }
 }
 /* 768 */
@@ -1291,6 +1285,19 @@ iframe {  /* which one is this? */
         width: 39%;
         left: 400px;
     }
+    /* ux */
+    .introSH {
+        width: 700px;
+        height: 650px;
+        margin: 0 auto;
+    }
+    h5.ux {
+        text-align: center;
+    }
+    h1.ux {
+        margin-left: 30vw;
+        margin-top: 3em;
+    }
 }
 /* 896 */
 @media screen and (min-width: 56em){
@@ -1330,7 +1337,6 @@ iframe {  /* which one is this? */
         bottom: -4em;
         left: 5em;
     }
-
     .animationProjects {
         width: 81vw;
     }
@@ -1350,6 +1356,12 @@ iframe {  /* which one is this? */
         left: 400px;
     }
     /* ux */
+    img.logo {
+        width: 350px;
+    }
+    .aboutLogoDesign {
+        padding-top: 70px;
+    }
     div.introSH, div.report, div.dilemma {
         width: 860px;
         margin: 0 auto;
@@ -1360,6 +1372,7 @@ iframe {  /* which one is this? */
 }
 /* 1000 */
 @media screen and (min-width: 1000px){
+    /* web */
     p.responsive {
         left: -2.5em;
     }
@@ -1379,6 +1392,7 @@ iframe {  /* which one is this? */
     .frontpageDesign {
         left: 10vw;
     }
+    /* animation */
     .gameImgs {
         margin-left: calc(50vw - 500px);
     }
@@ -1397,7 +1411,41 @@ iframe {  /* which one is this? */
     .strangeloveInfo p {
         margin: 2em;
     }
-
+    /* UX */
+    .designDoc {
+        width: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+    img.logo {
+        width: 290px;
+        margin-left: 0;
+        display: inline;
+    }
+    .aboutLogoDesignWrapper {
+        width: 900px;
+        margin: 0;
+        height: auto;
+        top: 400px;
+        padding: 0;
+        overflow: visible;
+        margin-bottom: 400px;
+    }
+    .wdil {
+        width: 570px;
+        right: 40px;
+        top: -25px;
+    }
+    .aboutLogoDesign {
+        padding-right: 2em;
+    }
+    .aboutLogoDesign p {
+        font-size: 16px;
+    }
+    div.dilemma {
+        margin-top: 700px;
+        width: 900px;
+    }
 }
 /* 1280 */
 @media screen and (min-width: 80em){
