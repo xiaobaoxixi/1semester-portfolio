@@ -18,10 +18,10 @@ let more1 = document.querySelector('.more1');
 let more2 = document.querySelector('.more2');
 let videoStoryboard = document.querySelector('img.storyboard');
 let defaultImgNr = 1;
-let oriAss = document.querySelector('.oriAss');
-let deem = document.querySelector('.black');
-let originalAssignment= document.querySelector('.originalAssignment');
-let slideInButton = document.querySelector('img.slideIn');
+//let oriAss = document.querySelector('.oriAss');
+//let deem = document.querySelector('.black');
+//let originalAssignment= document.querySelector('.originalAssignment');
+//let slideInButton = document.querySelector('img.slideIn');
 
 // switch between storyboard imgs
 videoStoryboard.addEventListener('click', changeImg);
@@ -144,15 +144,15 @@ function clickMoreButtonAtBottom(){
     }
 }
 // toggle original website for citywalk
-oriAss.addEventListener('click', slideOutIFrame);
-function slideOutIFrame(){
-    deem.classList.add('deem');
-    originalAssignment.classList.add('slideOut');
-    slideInButton.classList.remove('hide');
-}
-slideInButton.addEventListener('click', slideInIFrame);
-function slideInIFrame(){
-    deem.classList.remove('deem');
-    originalAssignment.classList.remove('slideOut');
-    slideInButton.classList.add('hide');
-}
+//oriAss.addEventListener('click', slideOutIFrame);
+//function slideOutIFrame(){
+//    deem.classList.add('deem');
+//    originalAssignment.classList.add('slideOut');
+//    slideInButton.classList.remove('hide');
+//}
+//slideInButton.addEventListener('click', slideInIFrame);
+//function slideInIFrame(){
+//    deem.classList.remove('deem');
+//    originalAssignment.classList.remove('slideOut');
+//    slideInButton.classList.add('hide');
+//}

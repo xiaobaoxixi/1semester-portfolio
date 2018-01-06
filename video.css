@@ -1,19 +1,23 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: sans-serif;
 }
-a, a:active, a:checked, a:focus, a:hover, a:visited {
-    color: black;
-    text-decoration: none;
+a, a:active, a:visited, a:hover {
+    color: #333;
+    font-weight: bold;
 }
+body#video bg-video2 {
+    min-width: 480px;
+    overflow: scroll;
+}
+
 .iframeWrapper, iframe.originalAssignment {
     border: none;
-    width: 1248px;
-    height: 702px;
+    width: 90vw;
+    height: 50,625vw;
+    max-width: 1248px;
+    max-height: 702px;
     position: fixed;
-    right: -1280px;
+    right: -51vw;
     bottom: 0;
     z-index: 11;
     overflow: visible;
@@ -94,10 +98,14 @@ div.more1.expanded {
     margin-left: 0px;
     height: 234px;
     width: 470px;
-    background-color: white;
+    background-color: rgba(255,255,255, .9);
 }
 div.more1.expanded p {
     display: block;
+    margin-bottom: 1em;
+}
+div.more1.expanded p:not(:first-child){
+    margin-left: 2em;
 }
 div.more1.expanded p:nth-of-type(2) {
     margin-top: 2em;
@@ -112,19 +120,19 @@ img.videos {
     position: absolute;
     top: 100px;
     right: 6vw;
-    border: 2px solid #222;
+    box-shadow: 1px 10px 20px #777;
     padding-top: 55px;
     margin: 0 auto;
 }
 .video1Wrapper {
     width: 100%;
-    max-width: 624px;
     margin: 0 auto;
 }
 .video1 {
     display: block;
     width: 100%;
     max-width: 640px;
+    margin: 0 auto;
     height: 350px;
 }
 h2 {
@@ -164,10 +172,11 @@ h2 {
     }
 }
 .playPause {
-    margin: 1em 5px 0 0;
-    float: right;
     position: relative;
     cursor: pointer;
+    width: 100%;
+    max-width: 640px;
+    margin: 1em auto 0 auto;
 }
 .playPause div {
     position: absolute;
@@ -182,7 +191,7 @@ h2 {
 }
 .bg-video2 {
     width: 62vw;
-    height: 56vw;
+    height: 60vw;
     max-height: 900px;
     max-width: 1100px;
     position: absolute;
@@ -192,9 +201,9 @@ h2 {
 }
 .video2Wrapper {
     position: absolute;
-    top: 100px;
+    top: 120px;
     width: 80%;
-    height: 80%;
+    height: 47vw;
     margin-left: 10%;
 }
 .video2 {
@@ -234,8 +243,8 @@ h2 {
 }
 .bg-storyboard {
     width: 36vw;
-    height: 56vw;
-    max-height: 900px;
+    height: 60vw;
+    max-height: 1100px;
     position: absolute;
     top: 750px;
     right: 0;
@@ -297,6 +306,13 @@ img.storyboard, div.more2 {
     position: absolute;
     bottom: 130px;
 }
+div.more2 {
+    width: 80%;
+    right: 0;
+}
+.oriIcon {
+    width: 60px;
+}
 img.storyboard {
     cursor: pointer;
 }
@@ -319,7 +335,8 @@ nav.about a {
 
 @media screen and (max-width: 1024px){
     .bg-video2 {
-        height: 600px;
+        height: 78vw;
+        max-height: 730px;
     }
     .storyboardButton {
         right: 7vw;
@@ -339,9 +356,57 @@ nav.about a {
             opacity: 1;
         }
     }
-
     img.storyboard, div.more2 {
         bottom: 50px;
     }
 
+}
+@media screen and (max-width: 768px){
+    .bg-video1 {
+        width: 92vw;
+        position: absolute;
+        left: 4vw;
+        height: 530px;
+    }
+    .video2Wrapper {
+        top: 130px;
+        height: 76vw;
+        max-height: 790px;
+    }
+    div.more1, img.videos {
+        left: inherit;
+    }
+    .bg-video2 {
+        width: 100vw;
+        height: 110vw;
+        min-height: 550px;
+        box-shadow: 1px 10px 20px #aaa;
+    }
+    .bg-storyboard {
+        width: 100vw;
+        height: 100vw;
+        top: 1300px;
+    }
+    div.info2 {
+        display: none;
+    }
+    div.info2.expand {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 2em;
+    }
+    div.info2.expand img:not(.oriIcon) {
+        width: 167%;
+    }
+    div.more2 {
+        width: 130%;
+        left: 2em;
+        bottom: 150px;
+    }
+}
+@media screen and (max-width: 440px){
+    .playPause {
+        display: none;
+    }
 }
