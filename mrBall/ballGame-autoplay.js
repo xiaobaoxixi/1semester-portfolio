@@ -81,6 +81,7 @@ function resetScene(){
 }
 // ******* start any animation with reset scene ******* //
 resetScene();
+showVolumeIcon();
 move();
 setTimeout(moveTo30, 12000);
 setTimeout(oneJump, 13000);

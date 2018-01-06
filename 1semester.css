@@ -42,6 +42,32 @@ main {
     overflow-x: hidden;
 }
 /* web */
+.sideSwitch1, .sideSwitch2 {
+    cursor: pointer;
+    height: 30vh;
+    width: 13%;
+    position: fixed;
+    right: 0;
+    z-index: 111;
+    opacity: .7;
+    background-image: url('img/web/toRedesign.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sideSwitch2 {
+    opacity: .5;
+    height: 50vh;
+    width: 3%;
+    left: 0;
+    background-image: url('img/web/toOp-01.png');
+}
+.sideSwitch1:hover {
+    opacity: 1;
+}
+.sideSwitch2:hover {
+    opacity: 1;
+    width: 5%;
+}
 body#webDesign main {
     overflow-x: hidden;
     height: 100vh;
@@ -71,13 +97,15 @@ body#webDesign span {
     left: 100vw;
 }
 .redesign.show {
-    left: 0;
     background: white;
     z-index: 20;
     height: 2000px;
+    animation: moveLeft .3s ease forwards;
 }
-.redesign.show {
-    left: 0;
+@keyframes moveLeft {
+    to {
+        left: 0;
+    }
 }
 .sideToggle {
     color: white;
@@ -87,8 +115,8 @@ body#webDesign span {
     max-width: 200px;
     position: absolute;
     cursor: pointer;
-    text-align: center;
-    padding: 1em 0;
+    text-align: right;
+    padding: 2em 1em;
     z-index: 10;
 }
 .opArt .sideToggle {
@@ -106,11 +134,16 @@ body#webDesign span {
     color: rgba(173,173,173, .7);
 }
 .sideToggle.next, #toUX {
+    text-align: right;
     left: 77vw;
-    background-color: rgba(173,173,173, .7);
+    background-color: black;
     position: fixed;
     bottom: 0;
     left: 84vw;
+    opacity: .3;
+}
+.sideToggle.next:hover, #toUX:hover {
+    opacity: .8;
 }
 .responsiveSizes {
     width: 100vw;
@@ -257,10 +290,17 @@ p.responsive {
 .opArtTests {
     margin-top: 2em;
 }
-body#webDesign .opArtTests  h1, .opArtTests  h3 {
+body#webDesign .opArtTests h1, .opArtTests h2, .opArtTests ul {
     display: block;
     text-align: right;
     padding-right: 1em;
+}
+.opArtTests h2.last {
+    text-align: left;
+    margin-left: 2em;
+}
+.opArtTests ul {
+    padding-right: 0;
 }
 .opArtTests  h3 {
     margin-right: 1em;
@@ -332,7 +372,6 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
 }
 #arrowInFinal {
     width: 30px;
-    transform: rotate(90deg)
 }
 .navigationTest img {
     width: 100%;
@@ -346,10 +385,16 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
 }
 .navigationTest li {
     font-size: .9em;
+    font-weight: bold;
+    color: #333;
 }
 .clickableTest img {
     width: 80%;
     margin-left: 10%;
+}
+.clickableTestDesc p {
+    font-weight: bold;
+    color: #333;
 }
 .opArtOri {
     padding-top: 2em;
@@ -370,19 +415,21 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
 .redesignInfo {
     position: relative;
     right: 0;
-    top: 100px;
+    top: 50px;
+    text-align: center;
 }
 .redesignDesc {
     position: absolute;
     background: white;
     z-index: 2;
-    padding: 1em;
+    padding: 2em;
 }
 .redesignDesc p {
     margin-bottom: 1em;
+    text-align: left;
 }
 #redesignMore, #redesignLess {
-    display: inherit;
+    display: inline;
 }
 #redesignMore.hide, #redesignLess.hide {
     display: none;
@@ -395,6 +442,7 @@ body#webDesign .opArtTests  h1, .opArtTests  h3 {
     text-align: center;
     color: #555;
     font-size: 1.5em;
+    margin-left: 0;
 }
 .redesignM {
     padding-top: 2em;
@@ -969,6 +1017,10 @@ iframe {  /* which one is this? */
 /* 576 */
 @media screen and (min-width: 36em){
     /* web */
+    .frontpageDesign {
+        width: 90vw;
+        left: 5vw;
+    }
     .wrapper {
         width: 72vw;
         height: 67.5vw;
@@ -996,7 +1048,13 @@ iframe {  /* which one is this? */
     .clickableTest img:last-of-type {
         border: 1px solid #333;
     }
-
+    .clickableTestDesc p {
+        font-weight: bold;
+        width: 50vw;
+        text-align: right;
+        margin-left: 45vw;
+        margin-bottom: 1em;
+    }
     /* animation */
     .mrBall > div {
         width: 81vw;
@@ -1051,11 +1109,11 @@ iframe {  /* which one is this? */
 @media screen and (min-width: 48em){
     /* web */
     .sideToggle {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     .responsiveSizes {
         width: 80vw;
-        padding-left: 10vw;
+        padding-left: 7vw;
     }
     .responsiveSizes h1 {
         margin-left: 0;
@@ -1087,8 +1145,15 @@ iframe {  /* which one is this? */
     }
     .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 600px;
-        margin: 0 auto;
+        margin-left: calc(50vw - 370px);
         position: relative;
+    }
+    .navigationTest, .clickableTest {
+        margin: 0 auto;
+    }
+    .frontpageTest h1, .frontpageTest h2 {
+        position: relative;
+        right: -67px;
     }
     .frontpageDesignDesc {
         background-color: transparent;
@@ -1100,21 +1165,21 @@ iframe {  /* which one is this? */
         transform: rotate(270deg);
     }
     .frontpageDesign:nth-of-type(1) img:not(.arrowDown) {
-        margin-left: 33%;
+        margin-left: 200px;
     }
     #desc22 {
         top: -100%;
-        left: 66%;
+        left: 400px;
     }
     #desc22 img {
         transform: rotate(0deg);
     }
     #frontpage22 {
-        margin-left: 66%;
+        margin-left: 400px;
     }
     #desc33 {
         top: 0%;
-        left: 33%;
+        left: 200px;
     }
     #desc33 img {
         transform: rotate(90deg);
@@ -1124,25 +1189,31 @@ iframe {  /* which one is this? */
         margin-top: -310px;
     }
     #desc44 {
-        right: 80%;
+        left: -30px;
     }
     #frontpage44 {
-        margin-left: 33%;
+        margin-left: 200px;
     }
     #desc55 {
         top: -100%;
-        left: 66%;
+        left: 400px;
     }
     #desc55 img{
         transform: rotate(0deg);
     }
     #frontpage55 {
-        margin-left: 66%;
+        margin-left: 400px;
     }
     .finalFrontpage {
-        width: 66%;
+        width: 450px;
         margin-top: -200px;
         border-right: 1px solid #aaa;
+    }
+    .finalFrontpage p {
+        transform: rotate(90deg);
+        position: relative;
+        left: 260px;
+        bottom: -430px;
     }
     .clickableTest img {
         width: 30%;
@@ -1155,18 +1226,24 @@ iframe {  /* which one is this? */
     .clickableTestDesc {
         position: absolute;
         width: 31%;
-        margin-left: 33%;
+        margin-left: 35%;
         padding-top: 10%;
         font-size: .9em;
+    }
+    .clickableTestDesc p {
+        margin-left: 0;
+        text-align: left;
+        width: 100%;
     }
     .otherTest {
         padding: 2em;
         padding-left: 0;
     }
+    /*
     body#webDesign .opArtTests h1, body#webDesign .opArtTests h3 {
         text-align: left;
         margin-left: 0;
-    }
+    } */
     .navigationTest img:first-of-type {
         display: inherit;
     }
@@ -1177,6 +1254,9 @@ iframe {  /* which one is this? */
         width: 40%;
         margin-left: 7%;
         display: inline;
+    }
+    .redesign a:not(.noMove):last-of-type {
+        margin: -2em 7.3em;  /* bad solution */
     }
     /* animation */
     .mrBall h1 {
@@ -1277,8 +1357,14 @@ iframe {  /* which one is this? */
 }
 /* 1000 */
 @media screen and (min-width: 1000px){
+    p.responsive {
+        left: -2.5em;
+    }
     .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 800px;
+        margin-left: calc(50vw - 470px);
+    }
+    .navigationTest, .clickableTest {
         margin: 0 auto;
     }
     .responsiveSizes {
@@ -1287,8 +1373,8 @@ iframe {  /* which one is this? */
     .wrapper {
         margin-right: 10vw;
     }
-    .frontpageTest {
-        width: 800px;
+    .frontpageDesign {
+        left: 10vw;
     }
     .gameImgs {
         margin-left: calc(50vw - 500px);
@@ -1328,6 +1414,12 @@ iframe {  /* which one is this? */
     .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 1000px;
         margin: 0 auto;
+    }
+    .frontpageTest {
+        margin-left: 0;
+    }
+    .navigationTest, .clickableTest {
+        margin-left: calc(50vw - 700px);
     }
     /* animation */
     .mrBall h1 {

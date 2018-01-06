@@ -3,9 +3,8 @@ let redesignMore = document.querySelector('#redesignMore');
 let redesignLess = document.querySelector('#redesignLess');
 let redesignDesc = document.querySelector('.redesignDesc');
 let opArt = document.querySelector('.opArt');
-let toggleToRedesign = document.querySelector('.onOpArt');
-let toggleToOpArt = document.querySelector('.onRedesign');
-let toggleToOpArt2 = document.querySelector('.onRedesign2');
+let toggleToRedesign = document.querySelector('.sideSwitch1');
+let toggleToOpArt = document.querySelector('.sideSwitch2');
 let toAnimation = document.querySelector('#toAnimation');
 let toFrontpage = document.querySelector('p.frontpage');
 let toContent = document.querySelector('p.content');
@@ -43,19 +42,21 @@ toggleToRedesign.addEventListener('click', toRedesign);
 function toRedesign(){
     redesign.classList.add('show');
     opArt.classList.add('hide');
+    toggleToOpArt.classList.remove('hide');
     toAnimation.classList.remove('hide')
 }
 toggleToOpArt.addEventListener('click', toOpArt);
-toggleToOpArt2.addEventListener('click', toOpArt);
 function toOpArt(){
     redesign.classList.remove('show');
     opArt.classList.remove('hide');
+    toggleToOpArt.classList.add('hide');
     toAnimation.classList.add('hide')
 }
-// auto play start with frontpage
+
+
+
+///////// start: auto play start with frontpage
 displayFrontPage();
-setTimeout(displayContent, 6000);
-setTimeout(displayNavigation, 15000);
 
 // click on frontpage
 toFrontpage.addEventListener('click', displayFrontPage);
@@ -69,6 +70,7 @@ function displayFrontPage(){
     setTimeout(toPhone, 500);
     setTimeout(toPadV, 2500);
     setTimeout(toComputer, 4500);
+    setTimeout(displayContent, 7000);
 }
 toContent.addEventListener('click', displayContent);
 function displayContent(){
@@ -83,6 +85,7 @@ function displayContent(){
     setTimeout(toPadV, 2500);
     setTimeout(toPadH, 4500);
     setTimeout(toComputer, 6500);
+    setTimeout(displayNavigation, 9000);
 }
 toNavigation.addEventListener('click', displayNavigation);
 function displayNavigation(){
