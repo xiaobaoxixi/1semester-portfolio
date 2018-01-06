@@ -20,6 +20,7 @@ let more1 = document.querySelector('.more1');
 let more2 = document.querySelector('.more2');
 let videoStoryboard = document.querySelector('img.storyboard');
 let defaultImgNr = 1;
+let clickStoryboard = document.querySelector('.clickStoryboard');
 //let oriAss = document.querySelector('.oriAss');
 //let deem = document.querySelector('.black');
 //let originalAssignment= document.querySelector('.originalAssignment');
@@ -137,9 +138,11 @@ function clickButton(b){
             }
             if(b.src.indexOf('storyboard')>-1){
                 videoStoryboard.classList.remove('hide');
+                clickStoryboard.className = "clickStoryboard";
             }
             if(b.src.indexOf('more')>-1){
                 more2.classList.remove('hide');
+                clickStoryboard.className = "clickStoryboard hide";
             }
         }
     }

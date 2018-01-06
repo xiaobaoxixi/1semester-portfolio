@@ -9,49 +9,6 @@ body#video bg-video2 {
     min-width: 480px;
     overflow: scroll;
 }
-
-.iframeWrapper, iframe.originalAssignment {
-    border: none;
-    width: 90vw;
-    height: 50,625vw;
-    max-width: 1248px;
-    max-height: 702px;
-    position: fixed;
-    right: -51vw;
-    bottom: 0;
-    z-index: 11;
-    overflow: visible;
-}
-.slideIn {
-    width: 65px;
-    height: 72px;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: 12;
-    cursor: pointer;
-}
-iframe.originalAssignment.slideOut {
-    animation: slideOut 1s linear forwards;
-}
-@keyframes slideOut {
-    to {
-        transform: translateX(-1370px);
-    }
-}
-.deem {
-    z-index: 10;
-    width: 100vw;
-    height: 300vh;
-    background-color: black;
-    opacity: 0;
-    animation: deem .7s ease-out forwards;
-}
-@keyframes deem {
-    to {
-        opacity: .97;
-    }
-}
 main{
     position: relative;
     max-width: 90em;
@@ -279,6 +236,12 @@ h2 {
     right: 0;
     padding-top: 3vw;
 }
+p.clickStoryboard {
+    position: absolute;
+    bottom: 1em;
+    left: 3.5em;
+    font-size: .9em;
+}
 .storyboardButtons {
     height: 65px;
     position: absolute;
@@ -388,6 +351,11 @@ nav.about a {
     img.storyboard, div.more2 {
         bottom: 50px;
     }
+    p.clickStoryboard {
+        position: absolute;
+        bottom: 0em;
+        left: 2em;
+    }
 
 }
 @media screen and (max-width: 768px){
@@ -433,9 +401,22 @@ nav.about a {
         left: 2em;
         bottom: 150px;
     }
+    p.clickStoryboard {
+        position: absolute;
+        bottom: 0em;
+        left: 3em;
+        font-size: .8em;
+    }
 }
 @media screen and (max-width: 440px){
     .playPause {
         display: none;
     }
+    p.clickStoryboard {
+        position: absolute;
+        bottom: 0em;
+        left: 3em;
+        font-size: .7em;
+    }
+
 }
