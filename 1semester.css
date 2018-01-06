@@ -1070,6 +1070,118 @@ footer {
 .hide {
     display: none;
 }
+body#index main {
+    min-width: 100vw;
+}
+.start {
+    width: 80vw;
+    margin-left: 10vw;
+    text-align: center;
+    margin-top: 10vh;
+}
+.theme, .entrance {
+    height: 130px;
+    width: 96vw;
+    margin: 0 2vw;
+    position: relative;
+}
+.entrance {
+    height: 10vh;
+    background-color: transparent;
+    border-top: 1px solid black;
+    text-align: center;
+}
+.theme p {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+}
+.theme.res {
+    animation: showRes 2s forwards;
+}
+@keyframes showRes {
+    50% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+}
+.theme.ani {
+    animation: showAni 2s 1s linear forwards;
+}
+@keyframes showAni {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+}
+.theme.ux {
+    animation: showUx 2s 2s forwards;
+}
+@keyframes showUx {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+}
+.theme.vid {
+    animation: showVid 2s 3s forwards;
+}
+@keyframes showVid {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+}
+.theme {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.theme.res {
+    background-image: url(img/index/res.jpg);
+}
+.theme.ani {
+    background-image: url(img/index/ani.jpg);
+}
+.theme.ux {
+    background-image: url(img/index/ux.jpg);
+}
+.theme.vid {
+    background-image: url(img/index/vid.jpg);
+}
+.mainNav {
+    height: 2em;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 10px;
+    padding-left: 13vw;
+    padding-top: 1em;
+    text-align: left;
+    background-color: rgba(255,255,255,.7);
+    z-index: 130;
+}
+.mainNav a {
+    margin-right: 2em;
+    text-decoration: none;
+}
+.mainNav a.on {
+    color: #ccc;
+}
+
 /* 576 */
 @media screen and (min-width: 36em){
     /* web */
@@ -1156,6 +1268,9 @@ footer {
     }
     .aboutText * {
         font-size: 15px;
+    }
+    .theme {
+        height: 170px;
     }
 }
 /* 768 */
@@ -1528,7 +1643,6 @@ footer {
     .aboutText * {
         font-size: 17px;
     }
-
 }
 /* 1280 */
 @media screen and (min-width: 80em){

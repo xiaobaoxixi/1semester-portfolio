@@ -58,13 +58,23 @@ main{
     margin: 0 auto;
 }
 .mainNav {
-    height: 70px;
-    width: 20vw;
+    height: 2em;
+    width: 100vw;
     overflow: hidden;
     position: fixed;
     top: 10px;
-    right: 10px;
-    text-align: right;
+    padding-left: 13vw;
+    padding-top: 1em;
+    text-align: left;
+    background-color: rgba(255,255,255,.7);
+    z-index: 130;
+}
+.mainNav a {
+    margin-right: 2em;
+    text-decoration: none;
+}
+.mainNav a.on {
+    color: #ccc;
 }
 .desc h1{
     width: 30%;
@@ -127,6 +137,10 @@ img.videos {
 .video1Wrapper {
     width: 100%;
     margin: 0 auto;
+    background-image: url(img/video/vid1cover.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 .video1 {
     display: block;
@@ -134,6 +148,11 @@ img.videos {
     max-width: 640px;
     margin: 0 auto;
     height: 350px;
+    opacity: 0;
+}
+.video1Cover {
+    position: absolute;
+    top: -350px;
 }
 h2 {
     color: #222;
@@ -156,19 +175,21 @@ h2 {
 }
 .progressLine1 {
     position: relative;
-
     height: 35px;
     border-bottom: 2px solid #333;
     width: 2px;
-    animation: progress 111s forwards linear;
+    animation: progress 112s forwards linear;
     animation-play-state: paused;
 }
 @keyframes progress {
-    from {
+    0% {
         width: 0%;
     }
-    to {
+    99% {
         width: 100%;
+    }
+    100% {
+        width: 0px;
     }
 }
 .playPause {
@@ -205,8 +226,13 @@ h2 {
     width: 80%;
     height: 47vw;
     margin-left: 10%;
+    background-image: url('img/video/vid2cover.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 .video2 {
+    opacity: 0;
     display: block;
     width: 84%;
     max-width: 640px;
@@ -218,18 +244,21 @@ h2 {
     height: 10px;
     border-bottom: 2px solid #aaa;
     width: 2px;
-    animation: progress2 206s forwards linear;
+    animation: progress2 208s forwards linear;
     animation-play-state: paused;
     position: absolute;
     bottom: 20px;
     left: 8%
 }
 @keyframes progress2 {
-    from {
+    0% {
         width: 0%;
     }
-    to {
+    99% {
         width: 90%;
+    }
+    100% {
+        width: 0px;
     }
 }
 .playPause2 {

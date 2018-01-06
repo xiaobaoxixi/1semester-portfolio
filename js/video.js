@@ -7,7 +7,9 @@ let pauseButton2 = document.querySelector('.pauseButton2');
 let progressLine1 = document.querySelector('.progressLine1');
 let progressLine2 = document.querySelector('.progressLine2');
 let video1 = document.querySelector('.video1');
+let video1Cover = document.querySelector('.video1Wrapper');
 let video2 = document.querySelector('.video2');
+let video2Cover = document.querySelector('.video2Wrapper');
 let pause1 = false;
 let pause2 = false;
 let storyboardButtons = document.querySelectorAll('.storyboardButtons');
@@ -35,18 +37,39 @@ function changeImg(){
 }
 // play/pause videos and progress bar
 function playVideo1(){
+    video1Cover.style.backgroundImage = "url()";
+    video1.style.opacity = "1";
     video1.play();
     pause1 = true;
     pauseButton1.classList.remove('hide');
     playButton1.classList.add('hide');
     progressLine1.style.webkitAnimationPlayState = "running";
+    video1.addEventListener('ended', video1Finished);
+    function video1Finished(){
+        video1Cover.style.backgroundImage = ("url('img/video/vid1cover.jpg')");
+        video1.style.opacity = "0";
+        pause1 = false;
+        pauseButton1.classList.add('hide');
+        playButton1.classList.remove('hide');
+    }
 }
 function playVideo2(){
+    video2Cover.style.backgroundImage = "url()";
+    video2.style.opacity = "1";
     video2.play();
     pause2 = true;
     pauseButton2.classList.remove('hide');
     playButton2.classList.add('hide');
     progressLine2.style.webkitAnimationPlayState = "running";
+    video2.addEventListener('ended', video2Finished);
+    function video2Finished(){
+        video2Cover.style.backgroundImage = ("url('img/video/vid2cover.jpg')");
+        video2.style.opacity = "0";
+        progressLine2.style.width = "2px";
+        pause2 = false;
+        pauseButton2.classList.add('hide');
+        playButton2.classList.remove('hide');
+    }
 }
 function pauseVideo1(){
     video1.pause();
