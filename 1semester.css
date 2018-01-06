@@ -1154,6 +1154,9 @@ footer {
     .aboutText {
         padding-top: 3.5em;
     }
+    .aboutText * {
+        font-size: 15px;
+    }
 }
 /* 768 */
 @media screen and (min-width: 48em){
@@ -1357,6 +1360,10 @@ footer {
     .aboutText {
         padding-top: 5.5em;
     }
+    .aboutText * {
+        font-size: 16px;
+    }
+
 }
 /* 896 */
 @media screen and (min-width: 56em){
@@ -1518,6 +1525,10 @@ footer {
     .aboutText {
         padding-top: 9.5em;
     }
+    .aboutText * {
+        font-size: 17px;
+    }
+
 }
 /* 1280 */
 @media screen and (min-width: 80em){
@@ -1604,6 +1615,8 @@ footer {
     .aboutText {
         padding-top: 11.5em;
     }
-
+    .aboutText * {
+        font-size: 18px;
+    }
 }
 /* grid */
