@@ -1020,6 +1020,46 @@ iframe {  /* which one is this? */
     border: none;
     margin: 1em 0;
 }
+.aboutMain {
+    height: 90vh;
+    width: 100vw;
+    position: relative;
+    background-color: #E0DCDD;
+}
+.aboutMain img:not(.mailIcon) {
+    height: 40%;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    filter: blur(31px);
+}
+.aboutMain img:not(.mailIcon):hover {
+    animation: removeBlur .2s ease-out forwards;
+}
+@keyframes removeBlur {
+    to {
+        filter: blur(0);
+    }
+}
+.aboutText, footer {
+    width: 50%;
+    position: absolute;
+    left: 10vw;
+    color: #777;
+    padding-top: 5em;
+}
+.aboutText * {
+    font-family: serif;
+    font-size: 19px;
+    line-height: 2;
+}
+.mailIcon {
+    width: 4em;
+}
+footer {
+    padding-top: 0;
+}
 .hide {
     display: none;
 }
@@ -1101,6 +1141,10 @@ iframe {  /* which one is this? */
     div.line2 {
         bottom: 350px;
     }
+    .aboutMain img:not(.mailIcon) {
+        height: 50%;
+    }
+
 }
 /* 768 */
 @media screen and (min-width: 48em){
@@ -1298,6 +1342,10 @@ iframe {  /* which one is this? */
         margin-left: 30vw;
         margin-top: 3em;
     }
+    .aboutMain img:not(.mailIcon) {
+        height: 60%;
+    }
+
 }
 /* 896 */
 @media screen and (min-width: 56em){
@@ -1369,6 +1417,10 @@ iframe {  /* which one is this? */
     div.line1 {
         bottom: 350px;
     }
+    .aboutMain img:not(.mailIcon) {
+        height: 70%;
+    }
+
 }
 /* 1000 */
 @media screen and (min-width: 1000px){
@@ -1445,6 +1497,10 @@ iframe {  /* which one is this? */
     div.dilemma {
         margin-top: 700px;
         width: 900px;
+    }
+    .aboutMain img:not(.mailIcon) {
+        right: 7vw;
+        height: 80%;
     }
 }
 /* 1280 */
@@ -1525,5 +1581,10 @@ iframe {  /* which one is this? */
         max-width: 900px;
         position: relative;
     }
+    .aboutMain img:not(.mailIcon) {
+        right: 5vw;
+        height: 85%;
+    }
+
 }
 /* grid */
