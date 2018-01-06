@@ -1023,7 +1023,7 @@ iframe {  /* which one is this? */
     margin: 1em 0;
 }
 .aboutMain {
-    height: 83vh;
+    height: 73vh;
     width: 100vw;
     position: relative;
     background-color: #E0DCDD;
@@ -1045,18 +1045,19 @@ iframe {  /* which one is this? */
     }
 }
 .aboutText, footer {
-    width: 50%;
+    width: 55%;
+    height: 85%;
     position: absolute;
     left: 10vw;
     color: #777;
-    padding-top: 5em;
+    padding-top: 2.5em;
     max-height: 600px;
     overflow: scroll;
 }
 .aboutText * {
     font-family: 'Bellefair', serif;
-    font-size: 19px;
-    line-height: 2;
+    font-size: 14px;
+    line-height: 1.7;
 }
 .mailIcon {
     width: 4em;
@@ -1122,7 +1123,7 @@ footer {
         height: 13em;
     }
     .worksheet {
-        top: 11em;
+        top: 9em;
         left: 2vw;
     }
     .story {
@@ -1150,7 +1151,9 @@ footer {
     .aboutMain img:not(.mailIcon) {
         height: 50%;
     }
-
+    .aboutText {
+        padding-top: 3.5em;
+    }
 }
 /* 768 */
 @media screen and (min-width: 48em){
@@ -1351,7 +1354,9 @@ footer {
     .aboutMain img:not(.mailIcon) {
         height: 60%;
     }
-
+    .aboutText {
+        padding-top: 5.5em;
+    }
 }
 /* 896 */
 @media screen and (min-width: 56em){
@@ -1426,7 +1431,9 @@ footer {
     .aboutMain img:not(.mailIcon) {
         height: 70%;
     }
-
+    .aboutText {
+        padding-top: 7.5em;
+    }
 }
 /* 1000 */
 @media screen and (min-width: 1000px){
@@ -1507,6 +1514,9 @@ footer {
     .aboutMain img:not(.mailIcon) {
         right: 7vw;
         height: 80%;
+    }
+    .aboutText {
+        padding-top: 9.5em;
     }
 }
 /* 1280 */
@@ -1590,6 +1600,9 @@ footer {
     .aboutMain img:not(.mailIcon) {
         right: 5vw;
         height: 85%;
+    }
+    .aboutText {
+        padding-top: 11.5em;
     }
 
 }
