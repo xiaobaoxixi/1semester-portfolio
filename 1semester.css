@@ -706,9 +706,11 @@ img.drStrangelove, .strangeloveOri {
 }
 .strangeloveInfo p {
     margin-left: 2em;
+    font-weight: normal;
 }
 .strangeloveInfo p:first-of-type {
     margin-top: 2em;
+    font-weight: bold;
 }
 img.game {
     width: 50%;
@@ -1012,7 +1014,7 @@ img.logo {
 img.pitchOriginalIcon {
     position: inherit;
     width: 200px;
-    margin: 30px auto 0 auto;
+    margin: 30px auto .5em auto;
 }
 iframe {  /* which one is this? */
     width: 100%;
@@ -1021,7 +1023,7 @@ iframe {  /* which one is this? */
     margin: 1em 0;
 }
 .aboutMain {
-    height: 90vh;
+    height: 83vh;
     width: 100vw;
     position: relative;
     background-color: #E0DCDD;
@@ -1048,9 +1050,11 @@ iframe {  /* which one is this? */
     left: 10vw;
     color: #777;
     padding-top: 5em;
+    max-height: 600px;
+    overflow: scroll;
 }
 .aboutText * {
-    font-family: serif;
+    font-family: 'Bellefair', serif;
     font-size: 19px;
     line-height: 2;
 }
@@ -1058,7 +1062,9 @@ iframe {  /* which one is this? */
     width: 4em;
 }
 footer {
-    padding-top: 0;
+    font-family: 'Bellefair', serif;
+    padding-top: 1em;
+    height: 3em;
 }
 .hide {
     display: none;
