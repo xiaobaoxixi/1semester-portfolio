@@ -481,14 +481,17 @@ body#webDesign .opArtTests h1, .opArtTests h2, .opArtTests ul {
     margin: 0;
 }
 .mrBallSimple iframe {
-    width: 100%;
-    height: 130%;
+    width: 100vw;
+    height: 60vw;
 }
 .mrBall > div {
     width: 90vw;
     height: 60vw;
     margin: 1em auto;
     position: relative;
+}
+.mrBall .mrBallSimple {
+    height: 43vw;
 }
 div.toggleStage, div.mrBallOri {
     height: 5em;
@@ -513,7 +516,7 @@ div.toggleStage, div.mrBallOri {
     position: absolute;
 }
 .mrBallOri img {
-    width: 80px;
+    width: 90px;
     height: auto;
     left: 0;
 }
@@ -791,7 +794,7 @@ div.line3 p {
 }
 @keyframes showP {
     to {
-        opacity: .85;
+        opacity: 1;
     }
 }
 div.line1.lineAnimation1 p, div.line2.lineAnimation2 p, div.line3.lineAnimation3 p {
@@ -1422,26 +1425,35 @@ iframe {  /* which one is this? */
         margin-left: calc(50vw - 700px);
     }
     /* animation */
+    .mrBall {
+        width: 1200px;
+        margin: 0 auto;
+        min-height: 730px;
+    }
     .mrBall h1 {
-        margin-left: 5em;
+        margin-left: 6em;
     }
-    .mrBall p {
-        margin-left: 11em;
-    }
-    .mrBall ul {
-        margin-left: 10em;
+    .mrBall p, .mrBall ul {
+        margin-left: 13em;
     }
     .mrBall > div {
         width: 999px;
         height: 31vw;
     }
     .mrBallSimple iframe {
-        width: 80%;
-        margin-left: 5%;
-        height: 104%;
+        width: 1000px;
+        height: 600px;
+        margin-left: 80px;
+    }
+    .mrBall .mrBallSimple {
+        height: 430px;
     }
     div.toggleStage, div.mrBallOri {
-        height: 4em;
+        height: 6em;
+    }
+    div.mrBallOri  {
+        width: auto;
+        padding-left: 11em;
     }
     .story {
         width: 999px;
@@ -1456,6 +1468,14 @@ iframe {  /* which one is this? */
         height: 5em;
         bottom: -5em;
         left: 5em;
+    }
+    .animationProjects {
+        width: 90vw;
+    }
+    iframe.projectScene {
+        max-height: 600px;
+        max-width: 900px;
+        position: relative;
     }
 }
 /* grid */
