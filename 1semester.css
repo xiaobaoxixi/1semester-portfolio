@@ -1268,6 +1268,13 @@ img.indexOriginal {
     color: #555;
     margin: 2em auto;
 }
+p.themesP {
+    font-size: .9em;
+    text-align: center;
+    position: relative;
+    top: -2em;
+    margin-bottom: 2em;
+}
 /* 576 */
 @media screen and (min-width: 36em){
     /* nav */
