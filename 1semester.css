@@ -34,7 +34,7 @@ img.more, img.closeButton, img.moreButton {
     width: 100%;
     height: 4em;
     overflow: hidden;
-    background-color: #eee;
+    background-color: #fafafa;
 }
 main {
     min-width: 480px;
@@ -113,10 +113,9 @@ body#webDesign span:not(.notBold) {
 }
 .sideToggle {
     color: white;
-    width: 17vw;
+    width: 10vw;
     height: 40vw;
     max-height: 100px;
-    max-width: 200px;
     position: absolute;
     cursor: pointer;
     text-align: right;
@@ -137,16 +136,16 @@ body#webDesign span:not(.notBold) {
     left: 0;
     color: rgba(173,173,173, .7);
 }
-.sideToggle.next, #toUX {
+.sideToggle.next, #toUX, #toAnimation {
+    width: 20vw;
     text-align: right;
-    left: 77vw;
     background-color: black;
     position: fixed;
     bottom: 0;
-    left: 84vw;
+    left: 80vw;
     opacity: .3;
 }
-.sideToggle.next:hover, #toUX:hover {
+.sideToggle.next:hover, #toUX:hover, #toAnimation:hover {
     opacity: .8;
 }
 .responsiveSizes {
@@ -447,8 +446,11 @@ body#webDesign .opArtTests h1, .opArtTests h2, .opArtTests ul {
 .compare p {
     text-align: center;
     color: #555;
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin-left: 0;
+}
+.compare div {
+    margin: 4em auto;
 }
 .redesignM {
     padding-top: 2em;
@@ -1039,7 +1041,7 @@ iframe {  /* which one is this? */
     margin: 1em 0;
 }
 .aboutMain {
-    height: 73vh;
+    height: 79vh;
     width: 100vw;
     position: relative;
     background-color: #E0DCDD;
@@ -1060,7 +1062,7 @@ iframe {  /* which one is this? */
         filter: blur(0);
     }
 }
-.aboutText, footer:not(.indexFooter) {
+.aboutText, footer:not(.indexFooter #videoFooter) {
     width: 55%;
     height: 85%;
     position: absolute;
@@ -1070,15 +1072,21 @@ iframe {  /* which one is this? */
     max-height: 600px;
     overflow: scroll;
 }
+.aboutText {
+    width: 55vw;
+    padding-left: 10vw;
+    padding-top: 2.5em;
+}
 .aboutText * {
     font-family: 'Bellefair', serif;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.7;
+    color: #717171;
 }
 .mailIcon {
     width: 4em;
 }
-footer:not(.indexFooter) {
+footer:not(.indexFooter #videoFooter) {
     width: 100vw;
     text-align: center;
     padding-top: 4em;
@@ -1086,6 +1094,7 @@ footer:not(.indexFooter) {
     max-height: none;
     position: relative;
     left: 0;
+    font-size: 12px;
 }
 .hide {
     display: none;
@@ -1193,24 +1202,31 @@ body#index main {
     transform-origin: bottom;
 }
 .mainNav {
-    height: 4.5em;
+    height: 5.5em;
     width: 100vw;
     overflow: hidden;
     top: 10px;
     padding-top: 1.5em;
-    padding-left: 4.5em;
+    padding-left: 2em;
     text-align: left;
-    background-color: rgba(255,255,255,.7);
+    background-color: rgba(0,0,0,.03);
     z-index: 130;
 }
 .mainNav a {
-    margin-right: 2em;
+    margin-right: 1em;
     text-decoration: none;
+    cursor: pointer;
+}
+.mainNav a.on {
+    cursor: default;
+}
+.notBold {
+    display: none;
 }
 .mainNav a.on {
     color: #ccc;
 }
-footer.indexFooter, a.indexA, .entrance {
+footer.indexFooter:not(#videoFooter), a.indexA, .entrance {
     display: block;
     width: 340px;
     margin: 0 auto 2em auto;
@@ -1241,8 +1257,31 @@ img.indexOriginal {
 .entrance span:nth-of-type(even) {
     margin-left: 1em;
 }
+#aboutFooter {
+    margin-left: 10vw;
+    font-size: 12px;
+    color: #717171;
+}
+#webFooter, #aniFooter, #uxFooter {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    margin: 2em auto;
+}
 /* 576 */
 @media screen and (min-width: 36em){
+    /* nav */
+    .mainNav {
+        height: 4em;
+        text-align: left;
+    }
+    .notBold {
+        display: inherit;
+    }
+    p.themesNav {
+        display: inline;
+        font-size: .9em;
+    }
     /* web */
     .frontpageDesign {
         width: 90vw;
@@ -1326,12 +1365,12 @@ img.indexOriginal {
         padding-top: 3.5em;
     }
     .aboutText * {
-        font-size: 15px;
+        font-size: 14px;
     }
     .theme {
         height: 170px;
     }
-    footer.indexFooter, a.indexA, .entrance {
+    footer.indexFooter:not(#videoFooter), a.indexA, .entrance {
         width: 450px;
     }
     .bounce {
@@ -1342,6 +1381,10 @@ img.indexOriginal {
 }
 /* 768 */
 @media screen and (min-width: 48em){
+    /* nav */
+    .mainNav {
+        padding-left: 3.5em;
+    }
     /* web */
     .sideToggle {
         font-size: 1.1em;
@@ -1540,10 +1583,10 @@ img.indexOriginal {
         height: 60%;
     }
     .aboutText {
-        padding-top: 5.5em;
+        padding-top: 4.5em;
     }
     .aboutText * {
-        font-size: 16px;
+        font-size: 15px;
     }
     .theme:hover {
         animation: scale(1.4);
@@ -1628,6 +1671,16 @@ img.indexOriginal {
 }
 /* 1000 */
 @media screen and (min-width: 1000px){
+    /* nav*/
+    .mainNav {
+        padding-left: 6em;
+    }
+    .mainNav a {
+        margin-right: 2em;
+    }
+    p.themesNav {
+        font-size: 1em;
+    }
     /* web */
     p.responsive {
         left: -2.5em;
@@ -1673,7 +1726,10 @@ img.indexOriginal {
         top: -32px;
         left: 144px;
     }
-
+    .sideToggle.next, #toUX, #toAnimation {
+        width: 13vw;
+        left: 87vw;
+    }
     /* UX */
     .designDoc {
         width: 900px;
@@ -1717,7 +1773,7 @@ img.indexOriginal {
         padding-top: 7em;
     }
     .aboutText * {
-        font-size: 17px;
+        font-size: 16px;
     }
     .theme:hover {
         animation: scale(1.5);
@@ -1809,7 +1865,7 @@ img.indexOriginal {
         padding-top: 9em;
     }
     .aboutText * {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 /* grid */

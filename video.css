@@ -14,25 +14,6 @@ main{
     max-width: 90em;
     margin: 0 auto;
 }
-.mainNav {
-    height: 4em;
-    width: 70vw;
-    overflow: hidden;
-    position: absolute;
-    top: 10px;
-    padding-left: 8em;
-    padding-top: 1em;
-    text-align: left;
-    background-color: rgba(255,255,255,.7);
-    z-index: 130;
-}
-.mainNav a {
-    margin-right: 2em;
-    text-decoration: none;
-}
-.mainNav a.on {
-    color: #ccc;
-}
 .desc h1{
     width: 30%;
     position: absolute;
@@ -325,7 +306,7 @@ nav.about a {
 .hide {
     display: none;
 }
-footer {
+footer#videoFooter {
     padding-top: 1em;
     height: 3em;
     position: absolute;
@@ -337,9 +318,6 @@ footer {
 }
 
 @media screen and (max-width: 1024px){
-    .mainNav {
-        padding-left: 5em;
-    }
     .bg-video2 {
         height: 78vw;
         max-height: 730px;
@@ -370,15 +348,11 @@ footer {
         bottom: 0em;
         left: 2em;
     }
-    footer {
-        bottom: -85vw;
+    footer#videoFooter {
+        bottom: -100vw;
     }
 }
 @media screen and (max-width: 768px){
-    .mainNav {
-        padding-left: 5em;
-        text-align: center;
-    }
     .bg-video1 {
         width: 92vw;
         position: absolute;
@@ -427,18 +401,11 @@ footer {
         left: 3em;
         font-size: .8em;
     }
-    footer {
+    footer#videoFooter {
         bottom: -240vw;
     }
 }
 @media screen and (max-width: 440px){
-    .mainNav {
-        padding-left: 3em;
-        text-align: left;
-    }
-    .mainNav a {
-        margin-right: 1em;
-    }
     .playPause {
         display: none;
     }
@@ -448,15 +415,11 @@ footer {
         left: 3em;
         font-size: .7em;
     }
-    footer {
+    footer#videoFooter {
         bottom: -260vw;
     }
 }
 @media screen and (min-width: 1440px){
-    .mainNav {
-        padding-left: 5em;
-        text-align: center;
-    }
     .bg-video2 {
         width: 900px;
     }
@@ -468,7 +431,7 @@ footer {
         width: 400px;
         right: 5vw;
     }
-    footer {
+    footer#videoFooter {
         bottom: -900px;
     }
 }
