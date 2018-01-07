@@ -1079,11 +1079,13 @@ iframe {  /* which one is this? */
     width: 4em;
 }
 footer:not(.indexFooter) {
-    padding-top: 1em;
-    height: 3em;
+    width: 100vw;
+    text-align: center;
+    padding-top: 4em;
+    height: 7em;
     max-height: none;
     position: relative;
-    font-size: .7em;
+    left: 0;
 }
 .hide {
     display: none;
@@ -1712,7 +1714,7 @@ img.indexOriginal {
         height: 80%;
     }
     .aboutText {
-        padding-top: 9.5em;
+        padding-top: 7em;
     }
     .aboutText * {
         font-size: 17px;
@@ -1804,7 +1806,7 @@ img.indexOriginal {
         height: 85%;
     }
     .aboutText {
-        padding-top: 11.5em;
+        padding-top: 9em;
     }
     .aboutText * {
         font-size: 18px;

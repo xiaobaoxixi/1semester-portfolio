@@ -329,7 +329,7 @@ footer {
     padding-top: 1em;
     height: 3em;
     position: absolute;
-    bottom: -57vw;
+    bottom: -77vw;
     left: 10vw;
     color: #777;
     overflow: scroll;
@@ -371,7 +371,7 @@ footer {
         left: 2em;
     }
     footer {
-        bottom: -70vw;
+        bottom: -85vw;
     }
 }
 @media screen and (max-width: 768px){
