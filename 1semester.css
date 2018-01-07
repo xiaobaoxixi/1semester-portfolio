@@ -1046,7 +1046,7 @@ iframe {  /* which one is this? */
         filter: blur(0);
     }
 }
-.aboutText, footer {
+.aboutText, footer:not(.indexFooter) {
     width: 55%;
     height: 85%;
     position: absolute;
@@ -1064,7 +1064,7 @@ iframe {  /* which one is this? */
 .mailIcon {
     width: 4em;
 }
-footer {
+footer:not(.indexFooter) {
     padding-top: 1em;
     height: 3em;
     max-height: none;
@@ -1078,21 +1078,25 @@ body#index main {
     min-width: 100vw;
 }
 .start {
-    width: 80vw;
-    margin-left: 10vw;
+    width: 60vw;
+    margin-left: 20vw;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 2em;
+    border-bottom: 1px solid black;
+    margin-bottom: 2em;
 }
-.theme, .entrance {
+.theme {
     height: 130px;
     width: 96vw;
     margin: 0 2vw;
     position: relative;
 }
+.theme:hover {
+    transform: scale(1.5);
+}
 .entrance {
     height: 10vh;
     background-color: transparent;
-    border-top: 1px solid black;
     text-align: center;
 }
 .theme p {
@@ -1155,16 +1159,16 @@ body#index main {
     background-position: center;
 }
 .theme.res {
-    background-image: url(img/index/res.jpg);
+    background-image: url(img/index/res-01.png);
 }
 .theme.ani {
-    background-image: url(img/index/ani.jpg);
+    background-image: url(img/index/ani-01.png);
 }
 .theme.ux {
-    background-image: url(img/index/ux.jpg);
+    background-image: url(img/index/ux-01.png);
 }
 .theme.vid {
-    background-image: url(img/index/vid.jpg);
+    background-image: url(img/index/vid-01.png);
 }
 .mainNav {
     height: 4.5em;
@@ -1183,6 +1187,33 @@ body#index main {
 }
 .mainNav a.on {
     color: #ccc;
+}
+footer.indexFooter, a.indexA, .entrance {
+    display: block;
+    width: 340px;
+    margin: 0 auto 2em auto;
+    text-align: left;
+    font-size: 12px;
+    color: rgba(0,0,0,.89);
+}
+a.indexA {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: rgba(0,0,0,.89);
+}
+img.indexMore {
+    width: 2em;
+    display: inline;
+}
+img.indexOriginal {
+    width: 4em;
+    display: inline;
+}
+.entrance p {
+    margin-bottom: .5em;
+}
+.entrance span:nth-of-type(even) {
+    margin-left: 1em;
 }
 /* 576 */
 @media screen and (min-width: 36em){
@@ -1273,6 +1304,9 @@ body#index main {
     }
     .theme {
         height: 170px;
+    }
+    footer.indexFooter, a.indexA, .entrance {
+        width: 450px;
     }
 }
 /* 768 */
