@@ -44,8 +44,8 @@ main {
 /* web */
 .sideSwitch1, .sideSwitch2 {
     cursor: pointer;
-    height: 30vh;
-    width: 13%;
+    height: 20vh;
+    width: 11%;
     position: fixed;
     right: 0;
     z-index: 111;
@@ -110,7 +110,7 @@ body#webDesign span {
 }
 .sideToggle {
     color: white;
-    width: 16vw;
+    width: 17vw;
     height: 40vw;
     max-height: 100px;
     max-width: 200px;
