@@ -47,7 +47,7 @@ main {
 /* web */
 .sideSwitch1, .sideSwitch2 {
     cursor: pointer;
-    height: 20vh;
+    height: 27vh;
     width: 11%;
     position: fixed;
     right: 0;
@@ -1081,7 +1081,7 @@ iframe {  /* which one is this? */
     font-family: 'Bellefair', serif;
     font-size: 13px;
     line-height: 1.7;
-    color: #717171;
+    color: #797979;
 }
 .mailIcon {
     width: 4em;
@@ -1517,6 +1517,10 @@ img.indexOriginal {
         padding: 2em;
         padding-left: 0;
     }
+    .redesignDesc {
+        width: 50vw;
+        margin-left: 20vw;
+    }
     /*
     body#webDesign .opArtTests h1, body#webDesign .opArtTests h3 {
         text-align: left;
@@ -1589,7 +1593,7 @@ img.indexOriginal {
         font-size: 15px;
     }
     .theme:hover {
-        animation: scale(1.4);
+        transform: scale(1.4);
     }
 }
 /* 896 */
@@ -1776,7 +1780,7 @@ img.indexOriginal {
         font-size: 16px;
     }
     .theme:hover {
-        animation: scale(1.5);
+        transform: scale(1.5);
     }
 }
 /* 1280 */
