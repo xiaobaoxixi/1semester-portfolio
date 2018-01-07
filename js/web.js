@@ -69,10 +69,10 @@ function displayFrontPage(){
     device.classList.add('frontpage');
     device.classList.remove('content');
     device.classList.remove('navigation');
-    setTimeout(toPhone, 500);
-    setTimeout(toPadV, 2000);
-    setTimeout(toComputer, 3500);
-    setTimeout(displayContent, 5500);
+    setTimeout(toPhone, 1);
+    setTimeout(toPadV, 1500);
+    setTimeout(toComputer, 3000);
+    setTimeout(displayContent, 4500);
 }
 toContent.addEventListener('click', displayContent);
 function displayContent(){
@@ -83,11 +83,11 @@ function displayContent(){
     device.classList.remove('frontpage');
     device.classList.remove('navigation');
     device.classList.add('content');
-    setTimeout(toPhone, 500);
-    setTimeout(toPadV, 2000);
-    setTimeout(toPadH, 3500);
-    setTimeout(toComputer, 5000);
-    setTimeout(displayNavigation, 7000);
+    setTimeout(toPhone, 1);
+    setTimeout(toPadV, 1500);
+    setTimeout(toPadH, 3000);
+    setTimeout(toComputer, 4500);
+    setTimeout(displayNavigation, 6000);
 }
 toNavigation.addEventListener('click', displayNavigation);
 function displayNavigation(){
@@ -97,11 +97,11 @@ function displayNavigation(){
     device.classList.remove('frontpage');
     device.classList.remove('content');
     device.classList.add('navigation');
-    setTimeout(toPhone, 500);
-    setTimeout(toPadV, 2000);
-    setTimeout(toPadH, 3500);
-    setTimeout(toComputer, 5000);
-    setTimeout(displayFrontPage, 7000);
+    setTimeout(toPhone, 1);
+    setTimeout(toPadV, 1500);
+    setTimeout(toPadH, 3000);
+    setTimeout(toComputer, 4500);
+    setTimeout(displayFrontPage, 6000);
 }
 // toggle redesign desc
 redesignMore.addEventListener('click', toggleRedesignDesc);
