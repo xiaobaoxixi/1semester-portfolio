@@ -15,12 +15,12 @@ main{
     margin: 0 auto;
 }
 .mainNav {
-    height: 2em;
-    width: 100vw;
+    height: 4em;
+    width: 70vw;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     top: 10px;
-    padding-left: 13vw;
+    padding-left: 8em;
     padding-top: 1em;
     text-align: left;
     background-color: rgba(255,255,255,.7);
@@ -328,13 +328,17 @@ footer {
     padding-top: 1em;
     height: 3em;
     position: absolute;
-    bottom: -62vw;
+    bottom: -57vw;
     left: 10vw;
     color: #777;
     overflow: scroll;
+    font-size: .7em;
 }
 
 @media screen and (max-width: 1024px){
+    .mainNav {
+        padding-left: 5em;
+    }
     .bg-video2 {
         height: 78vw;
         max-height: 730px;
@@ -366,10 +370,14 @@ footer {
         left: 2em;
     }
     footer {
-        bottom: -74vw;
+        bottom: -70vw;
     }
 }
 @media screen and (max-width: 768px){
+    .mainNav {
+        padding-left: 5em;
+        text-align: center;
+    }
     .bg-video1 {
         width: 92vw;
         position: absolute;
@@ -419,10 +427,17 @@ footer {
         font-size: .8em;
     }
     footer {
-        bottom: -230vw;
+        bottom: -240vw;
     }
 }
 @media screen and (max-width: 440px){
+    .mainNav {
+        padding-left: 3em;
+        text-align: left;
+    }
+    .mainNav a {
+        margin-right: 1em;
+    }
     .playPause {
         display: none;
     }
@@ -437,6 +452,10 @@ footer {
     }
 }
 @media screen and (min-width: 1440px){
+    .mainNav {
+        padding-left: 5em;
+        text-align: center;
+    }
     .bg-video2 {
         width: 900px;
     }
@@ -447,5 +466,8 @@ footer {
     .bg-storyboard {
         width: 400px;
         right: 5vw;
+    }
+    footer {
+        bottom: -900px;
     }
 }

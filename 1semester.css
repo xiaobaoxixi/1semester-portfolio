@@ -1069,6 +1069,7 @@ footer {
     height: 3em;
     max-height: none;
     position: relative;
+    font-size: .7em;
 }
 .hide {
     display: none;
@@ -1166,12 +1167,12 @@ body#index main {
     background-image: url(img/index/vid.jpg);
 }
 .mainNav {
-    height: 4em;
+    height: 4.5em;
     width: 100vw;
     overflow: hidden;
     top: 10px;
-    padding-left: 13vw;
-    padding-top: 1em;
+    padding-top: 1.5em;
+    padding-left: 4.5em;
     text-align: left;
     background-color: rgba(255,255,255,.7);
     z-index: 130;
@@ -1183,7 +1184,6 @@ body#index main {
 .mainNav a.on {
     color: #ccc;
 }
-
 /* 576 */
 @media screen and (min-width: 36em){
     /* web */
