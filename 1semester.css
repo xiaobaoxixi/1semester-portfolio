@@ -427,6 +427,8 @@ body#webDesign .opArtTests h1, .opArtTests h2, .opArtTests ul {
     background: white;
     z-index: 2;
     padding: 2em;
+    border-bottom: 2px dotted #333;
+    margin-left: 3em;
 }
 .redesignDesc p {
     margin-bottom: 1em;
@@ -727,7 +729,12 @@ img.game {
     float: left;
     margin-top: 5px;
 }
-
+img.oriSL {
+    width:70px;
+    position: relative;
+    top: -16px;
+    left: 48px;
+}
 /* ux */
 h1 {
     display: inline;
@@ -743,16 +750,16 @@ img.icon {
     cursor: pointer;
 }
 div.infoSH {
-    width: 80%;
+    width: 350px;
     height: auto;
-    padding: 1em;
-    border-radius: 1em;
+    padding: 2em;
     background-color: white;
     position: absolute;
-    left: 10%;
+    left: calc(50vw - 150px);
     top: 5em;
     font-size: 13px;
     opacity: 0;
+    border-bottom: 2px dotted #333;
 }
 div.infoSH.show {
     z-index: 2;
@@ -1658,6 +1665,13 @@ img.indexOriginal {
     .strangeloveInfo p {
         margin: 2em;
     }
+    img.oriSL {
+        width:70px;
+        position: relative;
+        top: -32px;
+        left: 144px;
+    }
+
     /* UX */
     .designDoc {
         width: 900px;
