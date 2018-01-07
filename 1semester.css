@@ -1181,6 +1181,7 @@ body#index main {
 }
 .theme.vid {
     background-image: url(img/index/vid-01.png);
+    transform-origin: bottom;
 }
 .mainNav {
     height: 4.5em;
@@ -1212,6 +1213,10 @@ a.indexA {
     font-weight: bold;
     font-size: 1.3em;
     color: rgba(0,0,0,.89);
+}
+a.indexA:hover {
+    transform: scale(1.1);
+    transform-origin: top;
 }
 img.indexMore {
     width: 2em;
