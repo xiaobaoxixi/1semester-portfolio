@@ -1125,9 +1125,17 @@ body#index main {
     text-align: center;
 }
 .theme p {
+    display: none;
     position: absolute;
     bottom: 0;
-    left: 30%;
+    font-size: 1.1em;
+    color: rgba(0,0,0,.89);
+}
+.theme p.evenDot {
+    left: 19%;
+}
+.theme p.oddDot {
+    right: 19%;
 }
 .theme.res {
     animation: showRes 2s forwards;
@@ -1788,6 +1796,9 @@ p.themesP {
     }
     .theme:hover {
         transform: scale(1.5);
+    }
+    .theme p {
+        display: inherit;
     }
 }
 /* 1280 */
