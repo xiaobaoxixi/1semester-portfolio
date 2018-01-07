@@ -324,6 +324,15 @@ nav.about a {
 .hide {
     display: none;
 }
+footer {
+    padding-top: 1em;
+    height: 3em;
+    position: absolute;
+    bottom: -62vw;
+    left: 10vw;
+    color: #777;
+    overflow: scroll;
+}
 
 @media screen and (max-width: 1024px){
     .bg-video2 {
@@ -356,7 +365,9 @@ nav.about a {
         bottom: 0em;
         left: 2em;
     }
-
+    footer {
+        bottom: -74vw;
+    }
 }
 @media screen and (max-width: 768px){
     .bg-video1 {
@@ -407,6 +418,9 @@ nav.about a {
         left: 3em;
         font-size: .8em;
     }
+    footer {
+        bottom: -230vw;
+    }
 }
 @media screen and (max-width: 440px){
     .playPause {
@@ -418,5 +432,20 @@ nav.about a {
         left: 3em;
         font-size: .7em;
     }
-
+    footer {
+        bottom: -260vw;
+    }
+}
+@media screen and (min-width: 1440px){
+    .bg-video2 {
+        width: 900px;
+    }
+    .video2Wrapper {
+        width: 700px;
+        height: 700px;
+    }
+    .bg-storyboard {
+        width: 400px;
+        right: 5vw;
+    }
 }

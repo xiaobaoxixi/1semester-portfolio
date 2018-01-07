@@ -82,10 +82,11 @@ body#webDesign span {
 }
 .doubleSegment {
     width: 200vw;
+    position: relative;
 }
 .half {
     width: 100vw;
-    position: absolute;
+    position: relative;
 }
 .half p {
     margin-left: 2em;
@@ -94,7 +95,7 @@ body#webDesign span {
     left: 0;
 }
 .redesign {
-    left: 100vw;
+    left: 0;
 }
 .redesign.show {
     background: white;
@@ -732,6 +733,7 @@ img.icon {
     width: 40px;
     display: inline;
     margin-left: 1em;
+    cursor: pointer;
 }
 div.infoSH {
     width: 80%;
@@ -1063,9 +1065,10 @@ iframe {  /* which one is this? */
     width: 4em;
 }
 footer {
-    font-family: 'Bellefair', serif;
     padding-top: 1em;
     height: 3em;
+    max-height: none;
+    position: relative;
 }
 .hide {
     display: none;
@@ -1163,10 +1166,9 @@ body#index main {
     background-image: url(img/index/vid.jpg);
 }
 .mainNav {
-    height: 2em;
+    height: 4em;
     width: 100vw;
     overflow: hidden;
-    position: fixed;
     top: 10px;
     padding-left: 13vw;
     padding-top: 1em;

@@ -38,19 +38,21 @@ function toPhone(){
 }
 // switch screen sizes -END
 // toggle between 2 main parts
-toggleToRedesign.addEventListener('click', toRedesign);
+ toggleToRedesign.addEventListener('click', toRedesign);
 function toRedesign(){
-    redesign.classList.add('show');
+    redesign.classList.remove('hide');
+//    redesign.classList.add('show');
     opArt.classList.add('hide');
     toggleToOpArt.classList.remove('hide');
     toAnimation.classList.remove('hide')
 }
 toggleToOpArt.addEventListener('click', toOpArt);
 function toOpArt(){
-    redesign.classList.remove('show');
+//    redesign.classList.remove('show');
     opArt.classList.remove('hide');
     toggleToOpArt.classList.add('hide');
-    toAnimation.classList.add('hide')
+    toAnimation.classList.add('hide');
+    redesign.classList.add('hide');
 }
 
 
@@ -70,7 +72,7 @@ function displayFrontPage(){
     setTimeout(toPhone, 500);
     setTimeout(toPadV, 2500);
     setTimeout(toComputer, 4500);
-    setTimeout(displayContent, 7000);
+    setTimeout(displayContent, 8000);
 }
 toContent.addEventListener('click', displayContent);
 function displayContent(){
@@ -85,7 +87,7 @@ function displayContent(){
     setTimeout(toPadV, 2500);
     setTimeout(toPadH, 4500);
     setTimeout(toComputer, 6500);
-    setTimeout(displayNavigation, 9000);
+    setTimeout(displayNavigation, 10000);
 }
 toNavigation.addEventListener('click', displayNavigation);
 function displayNavigation(){
@@ -99,7 +101,7 @@ function displayNavigation(){
     setTimeout(toPadV, 2500);
     setTimeout(toPadH, 4500);
     setTimeout(toComputer, 6500);
-    setTimeout(displayFrontPage, 9000);
+    setTimeout(displayFrontPage, 10000);
 }
 // toggle redesign desc
 redesignMore.addEventListener('click', toggleRedesignDesc);

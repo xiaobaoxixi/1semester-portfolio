@@ -3,34 +3,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Web Design</title>
+    <title>Basic Web - Responsive</title>
     <link rel="stylesheet" href="1semester.css">
 </head>
 
 <body id="webDesign">
     <section class="mainNav">
-        <button><a href="index.html">Home</a></button>
-        <button><a href="about.html">About</a></button>
-        <button class="toggleProjectList">Project List</button>
-
+        <a href="index.html">Front page</a>
+        <a href="about.html">About me</a>
+        <a class="on" href="">web</a>
+        <a href="animation.html">animation</a>
+        <a href="ux.html">ux</a>
+        <a href="video.html">video</a>
         <nav class="projectList">
-            <ul>
-              <li>01.04. Responsive Website - Op Art</li>
-              <li class="lastInTheme group"><a>01.05. Basic Redesign</a></li>
-              <li>02.01. Simple Animation - Mr. Ball</li>
-              <li>02.02. Storytelling &amp; Character Design </li>
-              <li class="group">02.03.02. Interactive Animation</li>
-              <li class="group">02.03. ProjectPools - the "difficult" Magic Pie and the "easy" gallery</li>
-              <li class="lastInTheme group">Interactive Trailor - Dr. Strangelove</li>
-              <li class="lastInTheme group">03. Basic Video</li>
-              <li class="lastInTheme group">04. Basic UX / Digital Business</li>
-            </ul>
+<!--            <ul>
+              <li><a>01.04.01 Responsive Website - Op Art</a></li>
+              <li><a>01.05.03 Basic Redesign - Gates &amp; Fences</a></li>
+              <li class="lastInTheme"><a>01.05.04. Basic Redesign - Presentation</a></li>
+              <li><a>02.01.02 Simple Animation - Mr. Ball</a></li>
+              <li>02.02.01 Style tile &amp; Story idea </li>
+              <li>02.02.02 Story board &amp; Worksheet </li>
+              <li>02.02.03 Sprite sheet animation </li>
+              <li>02.03.02 Interactive Animation - help out and stay alive!</li>
+              <li>02.03.03 ProjectPool Day1 - The "difficult" Magic Pie
+              <li>02.03.04 ProjectPool Day2 - The "easy" gallery</li>
+              <li>02.04.02 Interactive Trailor - Dr. Strangelove - Personas collage</li>
+              <li>02.04.03 Interactive Trailor - Dr. Strangelove - Storyboard</li>
+              <li class="lastInTheme">02.04.04 Interactive Trailor - Dr. Strangelove - Expert test</li>
+              <li>03.01.01 Basic Video - Storytelling without words</li>
+              <li>03.02.01 Basic Video - Storyboard</li>
+              <li class="lastInTheme group">03.02.02 Basic Video - City Walk and Meetup</li>
+              <li>04.02.01 Basic UX - Business Model Canvas</li>
+              <li>04.02.02 Basic UX - Report</li>
+              <li>04.03.01 Basic UX - Design Document</li>
+              <li>04.04.01 Basic UX - Web prototype</li>
+              <li class="lastInTheme group">04.04.02 Basic UX - Pitch presentation</li>
+            </ul>  -->
         </nav>
     </section>
     <main>
         <div class="doubleSegment">
-            <div class="half opArt">
-                <div class="sideSwitch1"></div>
+            <div id="opART" class="half opArt">
+                <a href="#webRedesign"><div class="sideSwitch1"></div></a>
                 <div class="responsiveSizes">
                     <h1>Op Art </h1>
                     <span>- the responsive website</span>
@@ -51,7 +65,7 @@
 
                 <div class="opArtTests">
                     <div class="frontpageTest">
-                        <h1>Design Tests</h1>
+                        <h1>Design &amp; Tests</h1>
                         <h2>❶ Frontpage style</h2>
                         <div class="frontpageDesign">
                             <div class="frontpageDesignDesc">
@@ -102,7 +116,7 @@
                         </div>
                     </div>
                     <div class="navigationTest">
-                        <h1>Design Tests</h1>
+                        <h1>Design &amp; Tests</h1>
                         <h2>❷ Navigation: "where to" and button design</h2>
                         <ul>
                             <li>Would the user recognize the logo as "homepage" icon?</li>
@@ -132,8 +146,8 @@
                     </div>
                 </div>
             </div>
-            <div class="half redesign">
-                <div class="sideSwitch2 hide"></div>
+            <div class="half redesign hide" id="webRedesign">
+                <a href="#opART"><div class="sideSwitch2 hide"></div></a>
                 <a href="animation.html" class="noMove"><div class="sideToggle next toAnimation hide" id="toAnimation">next:<br>Animation</div></a>
                 <div class="redesignInfo">
                     <img class="icon" id="redesignMore" src="img/material/more-black.png" alt="more icon">
@@ -176,11 +190,11 @@
                     <img id="redesignOri" class="original originalRight" src="img/material/original-right.png" alt="original icon">
                     <a href="doc/web/redesign-presentation-group-8.pdf" target="_blank">Presentation Slides</a><br>
                     <a href="https://bnmstudio.com/redesigned/index.html" target="_blank">Redesigned website</a>
-                    <div class="sideSwitch2">to the middle of Op Art</div>
                 </div>
             </div>
         </div>
     </main>
+    <footer>Copyright &copy;Yan Li @KEA 2018</footer>
     <script src="js/web.js"></script>
 </body>
 </html>
