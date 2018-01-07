@@ -1092,7 +1092,7 @@ body#index main {
     position: relative;
 }
 .theme:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 .entrance {
     height: 10vh;
@@ -1128,6 +1128,11 @@ body#index main {
         opacity: 1;
         animation-timing-function: ease-in;
     }
+}
+.bounce {
+    position: absolute;
+    left: calc(50vw - 170px);
+    bottom: 10px;
 }
 .theme.ux {
     animation: showUx 2s 2s forwards;
@@ -1307,6 +1312,11 @@ img.indexOriginal {
     }
     footer.indexFooter, a.indexA, .entrance {
         width: 450px;
+    }
+    .bounce {
+        position: absolute;
+        left: calc(50vw - 200px);
+        bottom: 10px;
     }
 }
 /* 768 */
@@ -1514,7 +1524,9 @@ img.indexOriginal {
     .aboutText * {
         font-size: 16px;
     }
-
+    .theme:hover {
+        animation: scale(1.4);
+    }
 }
 /* 896 */
 @media screen and (min-width: 56em){
@@ -1678,6 +1690,9 @@ img.indexOriginal {
     }
     .aboutText * {
         font-size: 17px;
+    }
+    .theme:hover {
+        animation: scale(1.5);
     }
 }
 /* 1280 */
