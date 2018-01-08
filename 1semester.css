@@ -367,7 +367,7 @@ body#webDesign .opArtTests h1, .opArtTests h2, .opArtTests ul {
     border-right: 1px solid #aaa;
 }
 .finalFrontpage img:nth-of-type(2) {
-    width: 64%;
+    width: 62%;
 }
 .finalFrontpage img:nth-of-type(3) {
     width: 100%;
@@ -1420,10 +1420,8 @@ p.themesP {
         margin-left: 10vw;
     }
     p.responsive {
-        font-size: 2vw;
         position: absolute;
         left: 5vw;
-        font-size: 1em;
     }
     p.responsive:nth-of-type(1) {
         top: 10%;
@@ -1499,8 +1497,9 @@ p.themesP {
         margin-left: 400px;
     }
     .finalFrontpage {
-        width: 450px;
-        margin-top: -200px;
+        width: 400px;
+        margin-top: -240px;
+        margin-left: 83px;
         border-right: 1px solid #aaa;
     }
     .finalFrontpage p {
@@ -1692,8 +1691,15 @@ p.themesP {
 /* 1000 */
 @media screen and (min-width: 1000px){
     /* nav*/
+    main {
+        padding-top: 6em;
+    }
+    body#index main {
+        padding-top: 0;
+    }
     .mainNav {
         padding-left: 6em;
+        position: fixed;
     }
     .mainNav a {
         margin-right: 2em;
@@ -1702,9 +1708,9 @@ p.themesP {
         font-size: 1em;
     }
     /* web */
-    p.responsive {
+    /* p.responsive {
         left: -2.5em;
-    }
+    } */
     .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 800px;
         margin-left: calc(50vw - 470px);
@@ -1712,15 +1718,26 @@ p.themesP {
     .navigationTest, .clickableTest {
         margin: 0 auto;
     }
-    .responsiveSizes {
+    /*.responsiveSizes {
         padding-left: 0;
-    }
+    }*/
     .wrapper {
         margin-right: 10vw;
     }
     .frontpageDesign {
         left: 10vw;
     }
+    .finalFrontpage {
+        width: 430px;
+        margin-top: -240px;
+        margin-left: 123px;
+        border-right: 1px solid #aaa;
+    }
+    .clickableTest img {
+        width: 27%;
+        margin-left: 5%;
+    }
+
     /* animation */
     .gameImgs {
         margin-left: calc(50vw - 500px);
@@ -1813,20 +1830,27 @@ p.themesP {
         margin-right: 50px;
     }
     p.responsive {
-        font-size: 1.5em;
         position: absolute;
         padding-left: 0;
     }
     .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 1000px;
-        margin: 0 auto;
+        margin-left: calc(50vw - 670px);
     }
-    .frontpageTest {
-        margin-left: 0;
+    .responsiveSizes {
+        margin-left: calc(50vw - 620px);
+    }
+    .frontpageDesign {
+        left: calc(10vw + 100px);
+    }
+    .finalFrontpage {
+        width: 480px;
+        margin-top: -190px;
+        margin-left: 150px;
     }
     .navigationTest, .clickableTest {
-        margin-left: calc(50vw - 700px);
-    }
+        margin-left: calc(50vw - 600px);
+    } */
     /* animation */
     .mrBall {
         width: 1200px;
@@ -1856,10 +1880,29 @@ p.themesP {
     }
     div.mrBallOri  {
         width: auto;
-        padding-left: 11em;
+        padding-left: 9em;
     }
     .story {
         width: 999px;
+    }
+    .mrBall {
+        width: 999px;
+        margin: 0 calc(50vw - 560px);
+    }
+    h1.animationH1, h1.ux {
+        font-size: 2.9em;
+        margin-left: 2.5em;
+    }
+    h1.ux {
+        margin-left: 6em;
+    }
+    h5.ux {
+        font-size: 1.2em;
+        margin-left: 15em;
+        text-align: left;
+    }
+    .mrBall p, .mrBall ul {
+        margin-left: 11em;
     }
     .storyIdeaStyleTile {
         height: 710px;
