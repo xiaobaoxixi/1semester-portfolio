@@ -413,7 +413,7 @@ body#webDesign .opArtTests h1, .opArtTests h2, .opArtTests ul {
     position: relative;
 }
 .compare {
-    top: 130px;
+    top: 50px;
 }
 .redesignInfo {
     position: relative;
@@ -1437,16 +1437,14 @@ p.themesP {
     }
     .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 600px;
-        margin-left: calc(50vw - 370px);
+        margin: 0 auto;
+/*        margin-left: calc(50vw - 370px); */
         position: relative;
     }
-    .navigationTest, .clickableTest {
-        margin: 0 auto;
-    }
-    .frontpageTest h1, .frontpageTest h2 {
+    /* .frontpageTest h1, .frontpageTest h2 {
         position: relative;
         right: -67px;
-    }
+    } */
     .frontpageDesignDesc {
         background-color: transparent;
     }
@@ -1713,7 +1711,8 @@ p.themesP {
     } */
     .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 800px;
-        margin-left: calc(50vw - 470px);
+        margin: 0 auto;
+/*        margin-left: calc(50vw - 470px); */
     }
     .navigationTest, .clickableTest {
         margin: 0 auto;
@@ -1724,9 +1723,9 @@ p.themesP {
     .wrapper {
         margin-right: 10vw;
     }
-    .frontpageDesign {
+    /* .frontpageDesign {
         left: 10vw;
-    }
+    } */
     .finalFrontpage {
         width: 430px;
         margin-top: -240px;
@@ -1835,21 +1834,25 @@ p.themesP {
     }
     .responsiveSizes, .frontpageTest, .navigationTest, .clickableTest, .opArtOri, .otherTest {
         width: 1000px;
-        margin-left: calc(50vw - 670px);
+/*        margin-left: calc(50vw - 670px); /
     }
     .responsiveSizes {
-        margin-left: calc(50vw - 620px);
+        margin-left: calc(50vw - 620px); */
+        margin: 0 auto;
     }
     .frontpageDesign {
-        left: calc(10vw + 100px);
+        left: 10vw;
     }
+    /* .frontpageDesign {
+        left: calc(10vw + 100px);
+    } */
     .finalFrontpage {
         width: 480px;
         margin-top: -190px;
         margin-left: 150px;
     }
     .navigationTest, .clickableTest {
-        margin-left: calc(50vw - 600px);
+/*        margin-left: calc(50vw - 600px); */
     } */
     /* animation */
     .mrBall {
