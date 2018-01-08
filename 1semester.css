@@ -1041,7 +1041,7 @@ iframe {  /* which one is this? */
     margin: 1em 0;
 }
 .aboutMain {
-    height: 79vh;
+    height: auto;
     width: 100vw;
     position: relative;
     background-color: #E0DCDD;
@@ -1076,6 +1076,7 @@ iframe {  /* which one is this? */
     width: 55vw;
     padding-left: 10vw;
     padding-top: 2.5em;
+    padding-bottom: 7em;
 }
 .aboutText * {
     font-family: 'Bellefair', serif;
