@@ -36,6 +36,9 @@ img.more, img.closeButton, img.moreButton {
     overflow: hidden;
     background-color: #fafafa;
 }
+.mainNav a:not(.on):hover {
+    color: rgba(255,0,0,.7);
+}
 main {
     min-width: 480px;
 }
